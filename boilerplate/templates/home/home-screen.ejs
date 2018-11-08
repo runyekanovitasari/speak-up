@@ -1,0 +1,21 @@
+/*
+ * This component will display home screen that contains components header, home-content, and home-side-menu.
+ */
+
+
+import React, { Component } from 'react';
+import { Container } from 'native-base';
+import <%=func.camelCase(homeComponentFileName, {pascalCase: true})%> from '../../modules/user/component/<%=func._.kebabCase(homeComponentFileName)%>';
+import styles from '../../../assets/styles/default.style';
+
+class <%=func.camelCase(homeScreenFileName, {pascalCase: true})%> extends Component {
+    render() {
+      return (
+        <Container style={styles.containerBackground}>
+            <<%=func.camelCase(homeComponentFileName, {pascalCase: true})%> />
+        </Container>
+      );
+    }
+  }
+  
+export default <%=func.camelCase(homeScreenFileName, {pascalCase: true})%>;

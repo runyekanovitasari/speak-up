@@ -1,0 +1,123 @@
+{
+    "name": "Login Screen",
+    "description": "",
+    "params": {
+        "loginScreenFileName": {
+            "type": "text",
+            "message": "Login Screen Filename",
+            "validations": [
+                "required"
+            ]
+        },
+        "loginComponentFileName": {
+            "type": "text",
+            "message": "Login Component Filename",
+            "validations": [
+                "required"
+            ]
+        },
+        "loginFormFileName": {
+            "type": "text",
+            "message": "Login Form Filename",
+            "validations": [
+                "required"
+            ]
+        },
+        "loginLogoFileName": {
+            "type": "text",
+            "message": "Login Logo Filename",
+            "validations": [
+                "required"
+            ]
+        }
+    },
+    "context": {
+        "appTarget": "src/app/login",
+        "moduleTarget": "src/modules/authentication",
+        "rootStackConfigTarget": "src/common/navigation",
+        "combineReducerTarget": "src/common/store/reducer",
+        "translationTarget": "src/common/i18n/translations"
+    },
+    "steps": [
+        {
+            "type": "create-files-by-template",
+            "templateName": "login/login-screen.ejs",
+            "target": "<%=context.appTarget%>/<%=func._.kebabCase(loginScreenFileName)%>.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "login/components/login-component.ejs",
+            "target": "<%=context.moduleTarget%>/components/<%=func._.kebabCase(loginComponentFileName)%>.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "login/components/login-form.ejs",
+            "target": "<%=context.moduleTarget%>/components/<%=func._.kebabCase(loginFormFileName)%>.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "login/components/login-logo.ejs",
+            "target": "<%=context.moduleTarget%>/components/<%=func._.kebabCase(loginLogoFileName)%>.js"
+        },
+        {
+            "type": "target-is-exists",
+            "target": "<%=context.moduleTarget%>/store/authentication-reducer.js",
+            "otherwise": {
+                "type": "insert-templates-to-file",
+                "templates": [
+                    {
+                        "matches": "import PopupReducer from './../../../modules/popup/store/popup-reducer';",
+                        "templateName": "login/store/importReducer.ejs"
+                    },
+                    {
+                        "matches": "popup: PopupReducer,",
+                        "templateName": "login/store/combineReducers.ejs"
+                    }
+                ],
+                "target": "<%=context.combineReducerTarget%>/index.js",
+                "addNewLine": true
+            }
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "login/store/authentication-action-type.ejs",
+            "target": "<%=context.moduleTarget%>/store/authentication-action-type.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "login/store/authentication-action.ejs",
+            "target": "<%=context.moduleTarget%>/store/authentication-action.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "login/store/authentication-reducer.ejs",
+            "target": "<%=context.moduleTarget%>/store/authentication-reducer.js"
+        },
+        {
+            "type": "insert-templates-to-file",
+            "templates": [
+                {
+                    "matches": "const rootNavigationConfig = {",
+                    "templateName": "login/navigation/rootNavigationStackConfig.ejs"
+                },
+                {
+                    "matches": "import { createStackNavigator, createDrawerNavigator } from 'react-navigation';",
+                    "templateName": "login/navigation/importRootNavigationStackConfig.ejs"
+                }
+            ],
+            "target": "<%=context.rootStackConfigTarget%>/rootNavigationStackConfig.js",
+            "addNewLine": true
+        },
+        {
+            "type": "insert-templates-to-file",
+            "templates": [
+                {
+                    "matches":"\"header\": {",
+                    "templateName":"login/translation/translation.ejs"
+                }
+            ],
+            "target": "<%=context.translationTarget%>/en.json",
+            "addNewLine": true
+        }
+    ]
+}

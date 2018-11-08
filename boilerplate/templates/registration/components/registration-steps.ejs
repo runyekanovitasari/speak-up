@@ -1,0 +1,57 @@
+/**
+ * TODO :
+ * This file will be wrap all component step of registration.
+ * First thing you must do, you must be import and define the component of registration step,
+ * Then, You can call the component registration step with JSON format (see the example below).
+ * The sequence of formats affects the order of step that will display.
+ * Don't forget to export the component, in case another screen needed it.
+ */
+
+import React from 'react';
+import <%=func.camelCase(registrationComponentFileName, {pascalCase: true})%>Step1 from './<%=func._.kebabCase(registrationComponentFileName)%>-step1';
+import <%=func.camelCase(registrationComponentFileName, {pascalCase: true})%>Step2 from './<%=func._.kebabCase(registrationComponentFileName)%>-step2';
+import <%=func.camelCase(registrationComponentFileName, {pascalCase: true})%>Step3 from './<%=func._.kebabCase(registrationComponentFileName)%>-step3';
+
+/**
+ * Initialize the format json of component to display registration step
+ */
+
+const <%=func.camelCase(registrationComponentFileName, {pascalCase: true})%>Step = props => ([{
+    label: 'Register',
+    component:
+        <<%=func.camelCase(registrationComponentFileName, {pascalCase: true})%>Step1
+            formID={props.formID}
+            onNext={props.onNext}
+            agreementValidation={props.agreementValidation}
+        />,
+},
+{
+    label: 'Activation',
+    component:
+        <<%=func.camelCase(registrationComponentFileName, {pascalCase: true})%>Step2
+            formID={props.formID}
+            onNext={props.onNext}
+            onPrevious={props.onPrevious}
+            nameValidation={props.nameValidation}
+            dateOfBirthValidation={props.dateOfBirthValidation}
+            salutationValidation={props.salutationValidation}
+        />,
+},
+{
+    label: 'Input Profile',
+    component:
+        <<%=func.camelCase(registrationComponentFileName, {pascalCase: true})%>Step3
+            formID={props.formID}
+            onSubmit={props.onSubmit}
+            onPrevious={props.onPrevious}
+            passwordValidation={props.passwordValidation}
+            confirmPasswordValidation={props.confirmPasswordValidation}
+        />,
+},
+]);
+
+/**
+ * export component, in case another screen needed it.
+ */
+
+export default <%=func.camelCase(registrationComponentFileName, {pascalCase: true})%>Step;

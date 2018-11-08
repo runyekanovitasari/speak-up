@@ -1,0 +1,46 @@
+{
+  "name": "atiMobileTemplate",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "ati-mobile-cli": "^1.0.3-Beta3",
+    "ati-navigation": "^0.0.19",
+    "ati-react-native-redux-i18n": "^0.0.12",
+    "ati-redux-form": "^0.0.11",
+    "ati-ui-elements": "^0.0.136",
+    "ati-web-console-connector": "^0.0.10",
+    "axios": "^0.18.0",
+    "babel-preset-react-native": "^4.0.1",
+    "native-base": "^2.8.0",
+    "react": "16.5.0",
+    "react-native": "0.55.4",
+    "react-native-i18n": "^2.0.12",
+    "react-native-snap-carousel": "^3.7.4",
+    "react-navigation": "^2.7.0",
+    "react-navigation-redux-helpers": "^2.0.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-form": "^7.4.2",
+    "redux-persist": "^5.10.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "23.6.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "23.6.0",
+    "metro-react-native-babel-preset": "^0.45.4",
+    "react-test-renderer": "16.5.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

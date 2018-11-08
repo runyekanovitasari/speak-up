@@ -1,0 +1,115 @@
+{
+    "name":"Home Screen",
+    "description":"",
+    "params":{
+        "homeScreenFileName":{
+            "type":"text",
+            "message":"Home Screen Filename",
+            "validations":["required"]
+        },
+        "homeComponentFileName":{
+            "type":"text",
+            "message":"Home Component Filename",
+            "validations":["required"]
+        }
+    },
+    "context":{
+        "appTarget":"src/app/home",
+        "moduleTarget":"src/modules/user/component",
+        "rootStackConfigTarget": "src/common/navigation",
+        "combineReducerTarget": "src/common/store/reducer",
+        "translationTarget": "src/common/i18n/translations",
+        "swiperTarget": "src/modules/account"
+    },
+    "steps":[
+        {
+            "type":"create-files-by-template",
+            "templateName":"home/home-screen.ejs",
+            "target":"<%=context.appTarget%>/<%=func._.kebabCase(homeScreenFileName)%>.js"
+        },
+        {
+            "type":"create-files-by-template",
+            "templateName":"home/home.ejs",
+            "target":"<%=context.moduleTarget%>/<%=func._.kebabCase(homeComponentFileName)%>.js"
+        },
+        {
+            "type":"insert-templates-to-file",
+            "templates":[
+                {
+                    "matches":"const rootNavigationConfig = {",
+                    "templateName":"home/rootNavigationStackConfig.ejs"
+                },
+                {
+                    "matches":"import SideMenuNavigation from './../components/navigation/SideMenuNavigation';",
+                    "templateName":"home/createDrawer.ejs"
+                },
+                {
+                    "matches":"import SideMenuNavigation from './../components/navigation/SideMenuNavigation';",
+                    "templateName":"home/createStack.ejs"
+                },
+                {
+                    "matches":"import { createStackNavigator, createDrawerNavigator } from 'react-navigation';",
+                    "templateName":"home/importRootNavigationStackConfig.ejs"
+                }
+
+            ],
+            "target":"<%=context.rootStackConfigTarget%>/rootNavigationStackConfig.js",
+            "addNewLine":true
+        },
+        {
+            "type":"insert-templates-to-file",
+            "templates":[
+                {
+                    "matches":"\"header\": {",
+                    "templateName":"home/translation.ejs"
+                }
+            ],
+            "target":"<%=context.translationTarget%>/en.json",
+            "addNewLine":true
+        },
+        {
+            "type":"create-files-by-template",
+            "templateName":"account/components/account-card.ejs",
+            "target":"<%=context.swiperTarget%>/components/account-card.js"
+        },
+        {
+            "type":"create-files-by-template",
+            "templateName":"account/container/account-card-swiper.ejs",
+            "target":"<%=context.swiperTarget%>/container/account-card-swiper.js"
+        },
+        {
+            "type": "target-is-exists",
+            "target": "src/modules/account/store/account-reducer.js",
+            "otherwise": {
+                "type": "insert-templates-to-file",
+                "templates": [
+                    {
+                        "matches": "import PopupReducer from './../../../modules/popup/store/popup-reducer';",
+                        "templateName": "account/store/importReducer.ejs"
+                    },
+                    {
+                        "matches": "popup: PopupReducer,",
+                        "templateName": "account/store/combineReducers.ejs"
+                    }
+                ],
+                "target": "<%=context.combineReducerTarget%>/index.js",
+                "addNewLine": true
+            }
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "account/store/account-action-type.ejs",
+            "target": "src/modules/account/store/account-action-type.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "account/store/account-action.ejs",
+            "target": "src/modules/account/store/account-action.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "account/store/account-reducer.ejs",
+            "target": "src/modules/account/store/account-reducer.js"
+        }
+    ]
+}

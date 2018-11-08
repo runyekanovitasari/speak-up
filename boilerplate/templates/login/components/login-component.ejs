@@ -1,0 +1,41 @@
+/**
+ * This component just handle style/display of login screen and receive value of property from <%=func.camelCase(loginFormFileName, {pascalCase: true})%>
+ * tag <<%=func.camelCase(loginLogoFileName, {pascalCase: true})%>/> will call screen that contain a logo
+ * tag <<%=func.camelCase(loginFormFileName, {pascalCase: true})%> {...loginboxParam} /> will call screen that contains field box of login also automatically set the value of parameter loginboxParam
+ */
+
+import { View } from 'react-native';
+import React, { Component } from 'react';
+import <%=func.camelCase(loginLogoFileName, {pascalCase: true})%> from './../components/<%=func._.kebabCase(loginLogoFileName)%>';
+import <%=func.camelCase(loginFormFileName, {pascalCase: true})%> from './../components/<%=func._.kebabCase(loginFormFileName)%>';
+import styles from './../../../../assets/styles/default.style';
+
+class <%=func.camelCase(loginComponentFileName, {pascalCase: true})%> extends Component {
+  render() {
+      const {
+        formID,
+        secureTextEntry,
+        onSubmit,
+        onEyeIconPress,
+        userNameValidation,
+        passwordValidation,
+      } = this.props;
+
+    const loginboxParam = {
+        formID,
+        secureTextEntry,
+        onEyeIconPress,
+        onSubmit,
+        userNameValidation,
+        passwordValidation,
+      };
+    return (
+      <View style={styles.containerLoginStyle}>
+        <<%=func.camelCase(loginLogoFileName, {pascalCase: true})%> />
+        <<%=func.camelCase(loginFormFileName, {pascalCase: true})%> {...loginboxParam} />
+      </View>
+    );
+  }
+}
+
+export default <%=func.camelCase(loginComponentFileName, {pascalCase: true})%>;

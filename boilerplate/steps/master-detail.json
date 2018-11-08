@@ -1,0 +1,156 @@
+{
+    "name": "Master Detail Screen",
+    "description": "",
+    "params": {
+        "listScreenFileName": {
+            "type": "text",
+            "message": "List Screen Filename",
+            "validations": [
+                "required"
+            ]
+        },
+        "listComponentFileName": {
+            "type": "text",
+            "message": "List Component Filename",
+            "validations": [
+                "required"
+            ]
+        },
+        "listName": {
+            "type": "text",
+            "message": "List Name",
+            "validations": [
+                "required"
+            ]
+        },
+        "detailScreenFileName": {
+            "type": "text",
+            "message": "Detail Screen Filename",
+            "validations": [
+                "required"
+            ]
+        },
+        "detailComponentFileName": {
+            "type": "text",
+            "message": "Detail Component Filename",
+            "validations": [
+                "required"
+            ]
+        },
+        "detailName": {
+            "type": "text",
+            "message": "Detail Name",
+            "validations": [
+                "required"
+            ]
+        },
+        "historyComponentFileName": {
+            "type": "text",
+            "message": "History Component Filename",
+            "validations": [
+                "required"
+            ]
+        },
+        "historyName": {
+            "type": "text",
+            "message": "History Name",
+            "validations": [
+                "required"
+            ]
+        }
+    },
+    "context": {
+        "appTarget": "src/app/account",
+        "moduleTarget": "src/modules/account",
+        "rootStackConfigTarget": "src/common/navigation",
+        "combineReducerTarget": "src/common/store/reducer",
+        "translationTarget": "src/common/i18n/translations"
+    },
+    "steps": [
+        {
+            "type": "create-files-by-template",
+            "templateName": "master-detail/list-screen.ejs",
+            "target": "<%=context.appTarget%>/<%=func._.kebabCase(listScreenFileName)%>.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "master-detail/components/list.ejs",
+            "target": "<%=context.moduleTarget%>/components/<%=func._.kebabCase(listComponentFileName)%>.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "master-detail/detail-screen.ejs",
+            "target": "<%=context.appTarget%>/<%=func._.kebabCase(detailScreenFileName)%>.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "master-detail/components/detail.ejs",
+            "target": "<%=context.moduleTarget%>/components/<%=func._.kebabCase(detailComponentFileName)%>.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "master-detail/components/history.ejs",
+            "target": "<%=context.moduleTarget%>/components/<%=func._.kebabCase(historyComponentFileName)%>.js"
+        },
+        {
+            "type": "target-is-exists",
+            "target": "<%=context.moduleTarget%>/store/account-reducer.js",
+            "otherwise": {
+                "type": "insert-templates-to-file",
+                "templates": [
+                    {
+                        "matches": "import PopupReducer from './../../../modules/popup/store/popup-reducer';",
+                        "templateName": "account/store/importReducer.ejs"
+                    },
+                    {
+                        "matches": "popup: PopupReducer,",
+                        "templateName": "account/store/combineReducers.ejs"
+                    }
+                ],
+                "target": "<%=context.combineReducerTarget%>/index.js",
+                "addNewLine": true
+            }
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "account/store/account-reducer.ejs",
+            "target": "<%=context.moduleTarget%>/store/account-reducer.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "account/store/account-action.ejs",
+            "target": "<%=context.moduleTarget%>/store/account-action.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "account/store/account-action-type.ejs",
+            "target": "<%=context.moduleTarget%>/store/account-action-type.js"
+        },
+        {
+            "type": "insert-templates-to-file",
+            "templates": [
+                {
+                    "matches": "const rootNavigationConfig = {",
+                    "templateName": "master-detail/navigation/rootNavigationStackConfig.ejs"
+                },
+                {
+                    "matches": "import { createStackNavigator, createDrawerNavigator } from 'react-navigation';",
+                    "templateName": "master-detail/navigation/importRootNavigationStackConfig.ejs"
+                }
+            ],
+            "target": "<%=context.rootStackConfigTarget%>/rootNavigationStackConfig.js",
+            "addNewLine": true
+        },
+        {
+            "type": "insert-templates-to-file",
+            "templates": [
+                {
+                    "matches":"\"header\": {",
+                    "templateName":"master-detail/translation/translation.ejs"
+                }
+            ],
+            "target": "<%=context.translationTarget%>/en.json",
+            "addNewLine": true
+        }
+    ]
+}

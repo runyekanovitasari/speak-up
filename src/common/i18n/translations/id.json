@@ -1,0 +1,36 @@
+{
+    "button": {
+        "submit": "Submit"
+    },
+    "label": {
+        "accountFrom": "Dari",
+        "destinationAccount": "Tujuan",
+        "amount": "Jumlah",
+        "note": "Catatan",
+        "transactionType": "Tipe Transaction",
+        "status": "Status",
+        "name": "Name",
+        "dateOfBirth": "Tanggal Lahir",
+        "salutation": "Salutation",
+        "password": "Kata Sandi",
+        "confirmPassword": "Konfirmasi Kata Sandi",
+        "selectDefault": "- Pilih salah satu -",
+        "logout": "Log Out"
+    },
+    "header": {
+        "ConfirmationScreen": "Confirmation Result",
+        "ResultScreen": "Transaction Result"
+    },
+    "sideMenu": {
+    },
+    "errorMessage": {
+        "passwordRequired": " Nama Pengguna atau Kata Sandi harus diisi.",
+        "invalidPassword" : " Nama Pengguna atau Kata Sandi anda Salah, Silahkan Periksa Kembali."
+    },
+    "apiResponse": {
+        "2001": "Kata Sandi anda salah."
+    },
+    "message": {
+        "logout": "Are you sure want to logout?"
+    }   
+}

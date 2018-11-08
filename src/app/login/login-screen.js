@@ -1,0 +1,102 @@
+/**
+ * This file contains a smart component, that will call the login screen component and set the property value from here.
+ */
+
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { withWebConsole } from 'ati-web-console-connector';
+import LoginComponent from './../../modules/authentication/components/login-component';
+import navigate from './../../common/navigation/action';
+import * as action from './../../modules/popup/store/popup-action';
+import * as authentication from './../../modules/authentication/store/authentication-action';
+/**
+ * function that handle value of input text. if the value undifined then redux form will automatically display message error.
+ * @param {*} value
+ */
+const required = value => (value ? undefined : 'Required');
+
+class LoginScreen extends Component {
+  /**
+     * Initialize the data that is going to change.
+     * You should initialize state in the constructor, and then call setState when you want to change it.
+     */
+  state = {
+    secureTextEntry: true,
+  }
+
+  /**
+   * function to handle when icon eye being pressed. when you press the eye icon, then the state will change value of secureTextEntry
+   */
+  onEyeIconPress = () => {
+    this.setState({ secureTextEntry: !this.state.secureTextEntry });
+  }
+
+  /**
+   * TODO :
+   * Function will be automatically running when button login clicked.
+   * This function will check your value of username and password. If the result are true, then the return will be navigate to homescreen.
+   * Validation required input of username or password also handled in this function, the return will set value of showMessage become true and set message of error to display in popup message.
+   */
+  onSubmit = (values) => {
+    /* TODO:
+       If you need login process that invoke to backend, you can use this code below :
+       ( this fuction will help you to invoke webconsole for login )
+       username login : richa2210352
+       password login : 123456
+    */
+
+      // const request = {
+      //   username: values.username,
+      //   password: values.password,
+      //   channel: 'MOB',
+      //   latitude: '',
+      //   longitude: '',
+      // };
+      // // this function will call action in file authentication-action
+      // this.props.login(this.props.webConsole, request, this.props.navigate, this.props.showAlert, this.props.dismissProgressDialog);
+      
+    /*
+      TODO :
+      This function will checked login process without invoke to backend process. You can use or modified the code below. You can modified depends on your need.
+    */
+    if ((values.username === 'admin' && values.password === '111111')) {
+      this.props.navigate('HomeScreen');
+    } else {
+      this.props.showAlert('errorMessage.invalidPassword');
+    }
+  }
+
+  /* property that used for component login box. such as :
+  * - formID : mandatory property that you must set when you use redux form.
+  * - userNameValidation : mandatory property, you must be filled if you want through the login process
+  * - passwordValidation : mandatory property, you must be filled if you want through the login process
+  * - onSubmit : This function will be run, when you submit (clicked) the button.You can modified the logic code on above.
+  */
+  render() {
+    return (
+      <LoginComponent
+        formID="login"
+        // This function will be run, when you submit (clicked) the button.You can modified the logic code on above.
+        onSubmit={this.onSubmit}
+        userNameValidation={required}
+        passwordValidation={required}
+      />
+    );
+  }
+}
+
+/**
+ * this function used for get data from redux store.
+ */
+const mapStateToProps = (state) => ({ ...state });
+
+/**
+ * navigate : Function to link to another screen in your app. The navigate action will update the current state with the result of a navigate action.
+ */
+const mapActionToProps = () => ({
+  navigate,
+  ...action,
+  ...authentication,
+});
+
+export default connect(mapStateToProps, mapActionToProps())(withWebConsole(LoginScreen));

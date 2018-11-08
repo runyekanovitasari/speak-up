@@ -1,0 +1,8 @@
+
+const <%=func.camelCase(homeScreenFileName, {pascalCase: true})%>Stack = createStackNavigator({
+    HomeScreen: { screen: <%=func.camelCase(homeScreenFileName, {pascalCase: true})%>, navigationOptions: { header: () => null } },
+  }, {
+      navigationOptions: {
+        header: () => <HeaderNavigation />,
+      },
+    });

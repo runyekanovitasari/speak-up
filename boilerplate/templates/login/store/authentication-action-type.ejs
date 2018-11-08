@@ -1,0 +1,1 @@
+export const SET_LOGIN_DATA = '@authentication/set_login_data';

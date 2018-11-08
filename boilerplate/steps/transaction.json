@@ -1,0 +1,195 @@
+{
+    "name": "Transaction Screen",
+    "description": "",
+    "params": {
+        "transactionScreenFileName": {
+            "type": "text",
+            "message": "Transaction Screen Filename",
+            "validations": [
+                "required"
+            ]
+        },
+        "formComponentFileName": {
+            "type": "text",
+            "message": "Form Component Filename",
+            "validations": [
+                "required"
+            ]
+        },
+        "formName": {
+            "type": "text",
+            "message": "Form Name",
+            "validations": [
+                "required"
+            ]
+        }
+    },
+    "context": {
+        "appTarget": "src/app/transaction",
+        "moduleTarget": "src/modules/transaction",
+        "rootStackConfigTarget": "src/common/navigation",
+        "combineReducerTarget": "src/common/store/reducer",
+        "translationTarget": "src/common/i18n/translations",
+        "swiperTarget": "src/modules/account"
+    },
+    "steps": [
+        {
+            "type": "create-files-by-template",
+            "templateName": "transaction/transaction-screen.ejs",
+            "target": "<%=context.appTarget%>/<%=func._.kebabCase(transactionScreenFileName)%>.js"
+        },
+        {
+            "type": "target-is-exists",
+            "target": "src/app/transaction/confirmation-screen.js",
+            "otherwise": {
+                "type": "insert-templates-to-file",
+                "templates": [
+                    {
+                        "matches": "const rootNavigationConfig = {",
+                        "templateName": "transaction/navigation/navigationGeneralScreen.ejs"
+                    },
+                    {
+                        "matches": "import { createStackNavigator, createDrawerNavigator } from 'react-navigation';",
+                        "templateName": "transaction/navigation/importGeneralScreen.ejs"
+                    }
+                ],
+                "target": "<%=context.rootStackConfigTarget%>/rootNavigationStackConfig.js",
+                "addNewLine": true
+            }
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "transaction/confirmation-screen.ejs",
+            "target": "<%=context.appTarget%>/confirmation-screen.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "transaction/result-screen.ejs",
+            "target": "<%=context.appTarget%>/result-screen.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "transaction/components/transaction-form.ejs",
+            "target": "<%=context.moduleTarget%>/components/<%=func._.kebabCase(formComponentFileName)%>.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "transaction/components/transaction-authentication.ejs",
+            "target": "<%=context.moduleTarget%>/components/transaction-authentication.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "transaction/components/confirmation-card.ejs",
+            "target": "<%=context.moduleTarget%>/components/confirmation-card.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "transaction/components/confirmation.ejs",
+            "target": "<%=context.moduleTarget%>/components/confirmation.js"
+        },
+        {
+            "type": "target-is-exists",
+            "target": "<%=context.moduleTarget%>/store/transaction-reducer.js",
+            "otherwise": {
+                "type": "insert-templates-to-file",
+                "templates": [
+                    {
+                        "matches": "import PopupReducer from './../../../modules/popup/store/popup-reducer';",
+                        "templateName": "transaction/store/importReducer.ejs"
+                    },
+                    {
+                        "matches": "popup: PopupReducer,",
+                        "templateName": "transaction/store/combineReducers.ejs"
+                    }
+                ],
+                "target": "<%=context.combineReducerTarget%>/index.js",
+                "addNewLine": true
+            }
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "transaction/store/transaction-action-type.ejs",
+            "target": "<%=context.moduleTarget%>/store/transaction-action-type.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "transaction/store/transaction-action.ejs",
+            "target": "<%=context.moduleTarget%>/store/transaction-action.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "transaction/store/transaction-reducer.ejs",
+            "target": "<%=context.moduleTarget%>/store/transaction-reducer.js"
+        },
+        {
+            "type":"create-files-by-template",
+            "templateName":"account/components/account-card.ejs",
+            "target":"<%=context.swiperTarget%>/components/account-card.js"
+        },
+        {
+            "type":"create-files-by-template",
+            "templateName":"account/container/account-card-swiper.ejs",
+            "target":"<%=context.swiperTarget%>/container/account-card-swiper.js"
+        },
+        {
+            "type": "target-is-exists",
+            "target": "src/modules/account/store/account-reducer.js",
+            "otherwise": {
+                "type": "insert-templates-to-file",
+                "templates": [
+                    {
+                        "matches": "import PopupReducer from './../../../modules/popup/store/popup-reducer';",
+                        "templateName": "account/store/importReducer.ejs"
+                    },
+                    {
+                        "matches": "popup: PopupReducer,",
+                        "templateName": "account/store/combineReducers.ejs"
+                    }
+                ],
+                "target": "<%=context.combineReducerTarget%>/index.js",
+                "addNewLine": true
+            }
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "account/store/account-action-type.ejs",
+            "target": "src/modules/account/store/account-action-type.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "account/store/account-action.ejs",
+            "target": "src/modules/account/store/account-action.js"
+        },
+        {
+            "type": "create-files-by-template",
+            "templateName": "account/store/account-reducer.ejs",
+            "target": "src/modules/account/store/account-reducer.js"
+        },
+        {
+            "type": "insert-templates-to-file",
+            "templates": [
+                {
+                    "matches": "const rootNavigationConfig = {",
+                    "templateName": "transaction/navigation/navigationTransactionScreen.ejs"
+                },
+                {
+                    "matches": "import { createStackNavigator, createDrawerNavigator } from 'react-navigation';",
+                    "templateName": "transaction/navigation/importTransactionScreen.ejs"
+                }
+            ],
+            "target": "<%=context.rootStackConfigTarget%>/rootNavigationStackConfig.js",
+            "addNewLine": true
+        },
+        {
+            "type": "insert-templates-to-file",
+            "templates": [
+                {
+                    "matches":"\"header\": {",
+                    "templateName":"transaction/translation/translation.ejs"
+                }
+            ],
+            "target": "<%=context.translationTarget%>/en.json",
+            "addNewLine": true
+        }
+    ]
+}

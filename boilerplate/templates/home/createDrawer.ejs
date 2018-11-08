@@ -1,0 +1,19 @@
+const <%=func.camelCase(homeScreenFileName, {pascalCase: true})%>Drawer = createDrawerNavigator(
+  {
+    Home: {
+      screen: <%=func.camelCase(homeScreenFileName, {pascalCase: true})%>Stack,
+    },
+    // If you want add some menu in drawer (side menu), you can put the list of screen below.
+    // example :
+    // Account: {
+    //    screen: accountListStack,
+    // },
+    // Transaction: {
+    //    screen: transactionListStack,
+    // },
+  },
+  {
+    contentComponent: SideMenuNavigation,
+    drawerWidth: 275,
+  },
+);

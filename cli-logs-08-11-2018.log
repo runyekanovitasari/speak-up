@@ -1,0 +1,1393 @@
+2018-11-08T10:28:57.997Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps
+2018-11-08T10:28:58.001Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\home.json
+2018-11-08T10:28:58.001Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\login.json
+2018-11-08T10:28:58.001Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\master-detail.json
+2018-11-08T10:28:58.001Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\registration.json
+2018-11-08T10:28:58.001Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\transaction.json
+2018-11-08T10:28:59.665Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\home.json
+2018-11-08T10:29:24.265Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\home\home-screen.ejs
+2018-11-08T10:29:24.268Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\home\home.ejs
+2018-11-08T10:29:24.270Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\src\common\navigation\rootNavigationStackConfig.js
+2018-11-08T10:29:24.270Z  info: import React from 'react';
+import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import HeaderNavigation from './../components/navigation/HeaderNavigation';
+import SideMenuNavigation from './../components/navigation/SideMenuNavigation';
+
+const rootNavigationConfig = {
+};
+
+export default rootNavigationConfig;
+2018-11-08T10:29:24.270Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\home\rootNavigationStackConfig.ejs
+2018-11-08T10:29:24.270Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\home\createDrawer.ejs
+2018-11-08T10:29:24.271Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\home\createStack.ejs
+2018-11-08T10:29:24.271Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\home\importRootNavigationStackConfig.ejs
+2018-11-08T10:29:24.273Z  info: import React from 'react';
+import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import HomeScreen from './../../../src/app/home/home-screen';
+import HeaderNavigation from './../components/navigation/HeaderNavigation';
+import SideMenuNavigation from './../components/navigation/SideMenuNavigation';
+
+const HomeScreenStack = createStackNavigator({
+    HomeScreen: { screen: HomeScreen, navigationOptions: { header: () => null } },
+  }, {
+      navigationOptions: {
+        header: () => <HeaderNavigation />,
+      },
+    });
+const HomeScreenDrawer = createDrawerNavigator(
+  {
+    Home: {
+      screen: HomeScreenStack,
+    },
+    // If you want add some menu in drawer (side menu), you can put the list of screen below.
+    // example :
+    // Account: {
+    //    screen: accountListStack,
+    // },
+    // Transaction: {
+    //    screen: transactionListStack,
+    // },
+  },
+  {
+    contentComponent: SideMenuNavigation,
+    drawerWidth: 275,
+  },
+);
+
+const rootNavigationConfig = {
+  HomeScreen: { screen: HomeScreenDrawer },
+};
+
+export default rootNavigationConfig;
+2018-11-08T10:29:24.274Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\src\common\i18n\translations\en.json
+2018-11-08T10:29:24.275Z  info: {
+    "button": {
+        "submit": "Submit"
+    },
+    "label": {
+        "accountFrom": "From",
+        "destinationAccount": "Destination",
+        "amount": "Amount",
+        "note": "Note",
+        "transactionType": "Transaction Type",
+        "status": "Status",
+        "name": "Name",
+        "dateOfBirth": "Date Of Birth",
+        "salutation": "Salutation",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "selectDefault": "- Choose One -",
+        "logout": "Log Out"
+    },
+    "header": {
+        "ConfirmationScreen": "Confirmation Result",
+        "ResultScreen": "Transaction Result"
+    },
+    "sideMenu": {
+    },
+    "errorMessage": {
+        "passwordRequired": " Username or Password must be filled.",
+        "invalidPassword" : " Username or Password does not match, Please check it again."
+    },
+    "apiResponse": {
+        "2001": "Password is incorrect."
+    },
+    "message": {
+        "logout": "Are you sure want to logout?"
+    }
+}
+2018-11-08T10:29:24.275Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\home\translation.ejs
+2018-11-08T10:29:24.275Z  info: {
+    "button": {
+        "submit": "Submit"
+    },
+    "label": {
+        "accountFrom": "From",
+        "destinationAccount": "Destination",
+        "amount": "Amount",
+        "note": "Note",
+        "transactionType": "Transaction Type",
+        "status": "Status",
+        "name": "Name",
+        "dateOfBirth": "Date Of Birth",
+        "salutation": "Salutation",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "selectDefault": "- Choose One -",
+        "logout": "Log Out"
+    },
+    "header": {
+"HomeScreen": "HomeScreen",
+        "ConfirmationScreen": "Confirmation Result",
+        "ResultScreen": "Transaction Result"
+    },
+    "sideMenu": {
+    },
+    "errorMessage": {
+        "passwordRequired": " Username or Password must be filled.",
+        "invalidPassword" : " Username or Password does not match, Please check it again."
+    },
+    "apiResponse": {
+        "2001": "Password is incorrect."
+    },
+    "message": {
+        "logout": "Are you sure want to logout?"
+    }
+}
+2018-11-08T10:29:24.276Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\account\components\account-card.ejs
+2018-11-08T10:29:24.278Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\account\container\account-card-swiper.ejs
+2018-11-08T10:29:24.280Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\src\common\store\reducer\index.js
+2018-11-08T10:29:24.280Z  info: import { combineReducers } from 'redux';
+import { AtiNavigationReducer } from 'ati-navigation';
+import { reducer as i18n } from 'ati-react-native-redux-i18n';
+import { formReducer } from 'ati-redux-form';
+import navHeaderReducer from './navHeaderReducer';
+import navigationReducer from './../../navigation/reducer';
+import PopupReducer from './../../../modules/popup/store/popup-reducer';
+
+const appReducers = combineReducers({
+    navHeader: navHeaderReducer,
+    nav: navigationReducer,
+    AtiNavigationReducer,
+    i18n,
+    form: formReducer,
+    popup: PopupReducer,
+});
+
+export default appReducers;
+
+2018-11-08T10:29:24.280Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\account\store\importReducer.ejs
+2018-11-08T10:29:24.280Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\account\store\combineReducers.ejs
+2018-11-08T10:29:24.281Z  info: import { combineReducers } from 'redux';
+import { AtiNavigationReducer } from 'ati-navigation';
+import { reducer as i18n } from 'ati-react-native-redux-i18n';
+import { formReducer } from 'ati-redux-form';
+import navHeaderReducer from './navHeaderReducer';
+import navigationReducer from './../../navigation/reducer';
+import PopupReducer from './../../../modules/popup/store/popup-reducer';
+import AccountReducer from './../../../../src/modules/account/store/account-reducer';
+
+const appReducers = combineReducers({
+    navHeader: navHeaderReducer,
+    nav: navigationReducer,
+    AtiNavigationReducer,
+    i18n,
+    form: formReducer,
+    popup: PopupReducer,
+account: AccountReducer,
+});
+
+export default appReducers;
+
+2018-11-08T10:29:24.282Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\account\store\account-action-type.ejs
+2018-11-08T10:29:24.283Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\account\store\account-action.ejs
+2018-11-08T10:29:24.286Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\account\store\account-reducer.ejs
+2018-11-08T10:29:37.262Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps
+2018-11-08T10:29:37.267Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\home.json
+2018-11-08T10:29:37.277Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\login.json
+2018-11-08T10:29:37.277Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\master-detail.json
+2018-11-08T10:29:37.277Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\registration.json
+2018-11-08T10:29:37.278Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\transaction.json
+2018-11-08T10:29:40.439Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\login.json
+2018-11-08T10:30:07.836Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\login\login-screen.ejs
+2018-11-08T10:30:07.843Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\login\components\login-component.ejs
+2018-11-08T10:30:07.867Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\login\components\login-form.ejs
+2018-11-08T10:30:07.870Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\login\components\login-logo.ejs
+2018-11-08T10:30:07.873Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\src\common\store\reducer\index.js
+2018-11-08T10:30:07.874Z  info: import { combineReducers } from 'redux';
+import { AtiNavigationReducer } from 'ati-navigation';
+import { reducer as i18n } from 'ati-react-native-redux-i18n';
+import { formReducer } from 'ati-redux-form';
+import navHeaderReducer from './navHeaderReducer';
+import navigationReducer from './../../navigation/reducer';
+import PopupReducer from './../../../modules/popup/store/popup-reducer';
+import AccountReducer from './../../../../src/modules/account/store/account-reducer';
+
+const appReducers = combineReducers({
+    navHeader: navHeaderReducer,
+    nav: navigationReducer,
+    AtiNavigationReducer,
+    i18n,
+    form: formReducer,
+    popup: PopupReducer,
+account: AccountReducer,
+});
+
+export default appReducers;
+
+2018-11-08T10:30:07.874Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\login\store\importReducer.ejs
+2018-11-08T10:30:07.874Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\login\store\combineReducers.ejs
+2018-11-08T10:30:07.875Z  info: import { combineReducers } from 'redux';
+import { AtiNavigationReducer } from 'ati-navigation';
+import { reducer as i18n } from 'ati-react-native-redux-i18n';
+import { formReducer } from 'ati-redux-form';
+import navHeaderReducer from './navHeaderReducer';
+import navigationReducer from './../../navigation/reducer';
+import PopupReducer from './../../../modules/popup/store/popup-reducer';
+import AuthenticationReducer from './../../../../src/modules/authentication/store/authentication-reducer';
+import AccountReducer from './../../../../src/modules/account/store/account-reducer';
+
+const appReducers = combineReducers({
+    navHeader: navHeaderReducer,
+    nav: navigationReducer,
+    AtiNavigationReducer,
+    i18n,
+    form: formReducer,
+    popup: PopupReducer,
+auth: AuthenticationReducer,
+account: AccountReducer,
+});
+
+export default appReducers;
+
+2018-11-08T10:30:07.877Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\login\store\authentication-action-type.ejs
+2018-11-08T10:30:07.878Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\login\store\authentication-action.ejs
+2018-11-08T10:30:07.880Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\login\store\authentication-reducer.ejs
+2018-11-08T10:30:07.881Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\src\common\navigation\rootNavigationStackConfig.js
+2018-11-08T10:30:07.882Z  info: import React from 'react';
+import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import HomeScreen from './../../../src/app/home/home-screen';
+import HeaderNavigation from './../components/navigation/HeaderNavigation';
+import SideMenuNavigation from './../components/navigation/SideMenuNavigation';
+
+const HomeScreenStack = createStackNavigator({
+    HomeScreen: { screen: HomeScreen, navigationOptions: { header: () => null } },
+  }, {
+      navigationOptions: {
+        header: () => <HeaderNavigation />,
+      },
+    });
+const HomeScreenDrawer = createDrawerNavigator(
+  {
+    Home: {
+      screen: HomeScreenStack,
+    },
+    // If you want add some menu in drawer (side menu), you can put the list of screen below.
+    // example :
+    // Account: {
+    //    screen: accountListStack,
+    // },
+    // Transaction: {
+    //    screen: transactionListStack,
+    // },
+  },
+  {
+    contentComponent: SideMenuNavigation,
+    drawerWidth: 275,
+  },
+);
+
+const rootNavigationConfig = {
+  HomeScreen: { screen: HomeScreenDrawer },
+};
+
+export default rootNavigationConfig;
+2018-11-08T10:30:07.882Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\login\navigation\rootNavigationStackConfig.ejs
+2018-11-08T10:30:07.882Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\login\navigation\importRootNavigationStackConfig.ejs
+2018-11-08T10:30:07.883Z  info: import React from 'react';
+import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import LoginScreen from './../../../src/app/login/login-screen';
+import HomeScreen from './../../../src/app/home/home-screen';
+import HeaderNavigation from './../components/navigation/HeaderNavigation';
+import SideMenuNavigation from './../components/navigation/SideMenuNavigation';
+
+const HomeScreenStack = createStackNavigator({
+    HomeScreen: { screen: HomeScreen, navigationOptions: { header: () => null } },
+  }, {
+      navigationOptions: {
+        header: () => <HeaderNavigation />,
+      },
+    });
+const HomeScreenDrawer = createDrawerNavigator(
+  {
+    Home: {
+      screen: HomeScreenStack,
+    },
+    // If you want add some menu in drawer (side menu), you can put the list of screen below.
+    // example :
+    // Account: {
+    //    screen: accountListStack,
+    // },
+    // Transaction: {
+    //    screen: transactionListStack,
+    // },
+  },
+  {
+    contentComponent: SideMenuNavigation,
+    drawerWidth: 275,
+  },
+);
+
+const rootNavigationConfig = {
+  LoginScreen: { screen: LoginScreen, navigationOptions: { header: () => null } },
+  HomeScreen: { screen: HomeScreenDrawer },
+};
+
+export default rootNavigationConfig;
+2018-11-08T10:30:07.884Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\src\common\i18n\translations\en.json
+2018-11-08T10:30:07.884Z  info: {
+    "button": {
+        "submit": "Submit"
+    },
+    "label": {
+        "accountFrom": "From",
+        "destinationAccount": "Destination",
+        "amount": "Amount",
+        "note": "Note",
+        "transactionType": "Transaction Type",
+        "status": "Status",
+        "name": "Name",
+        "dateOfBirth": "Date Of Birth",
+        "salutation": "Salutation",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "selectDefault": "- Choose One -",
+        "logout": "Log Out"
+    },
+    "header": {
+"HomeScreen": "HomeScreen",
+        "ConfirmationScreen": "Confirmation Result",
+        "ResultScreen": "Transaction Result"
+    },
+    "sideMenu": {
+    },
+    "errorMessage": {
+        "passwordRequired": " Username or Password must be filled.",
+        "invalidPassword" : " Username or Password does not match, Please check it again."
+    },
+    "apiResponse": {
+        "2001": "Password is incorrect."
+    },
+    "message": {
+        "logout": "Are you sure want to logout?"
+    }
+}
+2018-11-08T10:30:07.884Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\login\translation\translation.ejs
+2018-11-08T10:30:07.885Z  info: {
+    "button": {
+        "submit": "Submit"
+    },
+    "label": {
+        "accountFrom": "From",
+        "destinationAccount": "Destination",
+        "amount": "Amount",
+        "note": "Note",
+        "transactionType": "Transaction Type",
+        "status": "Status",
+        "name": "Name",
+        "dateOfBirth": "Date Of Birth",
+        "salutation": "Salutation",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "selectDefault": "- Choose One -",
+        "logout": "Log Out"
+    },
+    "header": {
+"LoginScreen": "LoginScreen",
+"HomeScreen": "HomeScreen",
+        "ConfirmationScreen": "Confirmation Result",
+        "ResultScreen": "Transaction Result"
+    },
+    "sideMenu": {
+    },
+    "errorMessage": {
+        "passwordRequired": " Username or Password must be filled.",
+        "invalidPassword" : " Username or Password does not match, Please check it again."
+    },
+    "apiResponse": {
+        "2001": "Password is incorrect."
+    },
+    "message": {
+        "logout": "Are you sure want to logout?"
+    }
+}
+2018-11-08T10:30:10.812Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps
+2018-11-08T10:30:10.817Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\home.json
+2018-11-08T10:30:10.818Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\login.json
+2018-11-08T10:30:10.818Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\master-detail.json
+2018-11-08T10:30:10.818Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\registration.json
+2018-11-08T10:30:10.818Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\transaction.json
+2018-11-08T10:30:18.029Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\registration.json
+2018-11-08T10:30:36.035Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\registration\registration-screen.ejs
+2018-11-08T10:30:36.038Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\registration\components\registration.ejs
+2018-11-08T10:30:36.053Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\registration\components\registration-steps.ejs
+2018-11-08T10:30:36.063Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\registration\components\registration-step1.ejs
+2018-11-08T10:30:36.065Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\registration\components\registration-step2.ejs
+2018-11-08T10:30:36.067Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\registration\components\registration-step3.ejs
+2018-11-08T10:30:36.070Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\src\common\store\reducer\index.js
+2018-11-08T10:30:36.070Z  info: import { combineReducers } from 'redux';
+import { AtiNavigationReducer } from 'ati-navigation';
+import { reducer as i18n } from 'ati-react-native-redux-i18n';
+import { formReducer } from 'ati-redux-form';
+import navHeaderReducer from './navHeaderReducer';
+import navigationReducer from './../../navigation/reducer';
+import PopupReducer from './../../../modules/popup/store/popup-reducer';
+import AuthenticationReducer from './../../../../src/modules/authentication/store/authentication-reducer';
+import AccountReducer from './../../../../src/modules/account/store/account-reducer';
+
+const appReducers = combineReducers({
+    navHeader: navHeaderReducer,
+    nav: navigationReducer,
+    AtiNavigationReducer,
+    i18n,
+    form: formReducer,
+    popup: PopupReducer,
+auth: AuthenticationReducer,
+account: AccountReducer,
+});
+
+export default appReducers;
+
+2018-11-08T10:30:36.071Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\registration\store\importReducer.ejs
+2018-11-08T10:30:36.071Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\registration\store\combineReducers.ejs
+2018-11-08T10:30:36.072Z  info: import { combineReducers } from 'redux';
+import { AtiNavigationReducer } from 'ati-navigation';
+import { reducer as i18n } from 'ati-react-native-redux-i18n';
+import { formReducer } from 'ati-redux-form';
+import navHeaderReducer from './navHeaderReducer';
+import navigationReducer from './../../navigation/reducer';
+import PopupReducer from './../../../modules/popup/store/popup-reducer';
+import RegistrationReducer from './../../../../src/modules/registration/store/registration-reducer';
+import AuthenticationReducer from './../../../../src/modules/authentication/store/authentication-reducer';
+import AccountReducer from './../../../../src/modules/account/store/account-reducer';
+
+const appReducers = combineReducers({
+    navHeader: navHeaderReducer,
+    nav: navigationReducer,
+    AtiNavigationReducer,
+    i18n,
+    form: formReducer,
+    popup: PopupReducer,
+registration: RegistrationReducer,
+auth: AuthenticationReducer,
+account: AccountReducer,
+});
+
+export default appReducers;
+
+2018-11-08T10:30:36.073Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\registration\store\registration-action-type.ejs
+2018-11-08T10:30:36.074Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\registration\store\registration-action.ejs
+2018-11-08T10:30:36.076Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\registration\store\registration-reducer.ejs
+2018-11-08T10:30:36.077Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\src\common\navigation\rootNavigationStackConfig.js
+2018-11-08T10:30:36.078Z  info: import React from 'react';
+import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import LoginScreen from './../../../src/app/login/login-screen';
+import HomeScreen from './../../../src/app/home/home-screen';
+import HeaderNavigation from './../components/navigation/HeaderNavigation';
+import SideMenuNavigation from './../components/navigation/SideMenuNavigation';
+
+const HomeScreenStack = createStackNavigator({
+    HomeScreen: { screen: HomeScreen, navigationOptions: { header: () => null } },
+  }, {
+      navigationOptions: {
+        header: () => <HeaderNavigation />,
+      },
+    });
+const HomeScreenDrawer = createDrawerNavigator(
+  {
+    Home: {
+      screen: HomeScreenStack,
+    },
+    // If you want add some menu in drawer (side menu), you can put the list of screen below.
+    // example :
+    // Account: {
+    //    screen: accountListStack,
+    // },
+    // Transaction: {
+    //    screen: transactionListStack,
+    // },
+  },
+  {
+    contentComponent: SideMenuNavigation,
+    drawerWidth: 275,
+  },
+);
+
+const rootNavigationConfig = {
+  LoginScreen: { screen: LoginScreen, navigationOptions: { header: () => null } },
+  HomeScreen: { screen: HomeScreenDrawer },
+};
+
+export default rootNavigationConfig;
+2018-11-08T10:30:36.078Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\registration\navigation\rootNavigationStackConfig.ejs
+2018-11-08T10:30:36.078Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\registration\navigation\importRootNavigationStackConfig.ejs
+2018-11-08T10:30:36.079Z  info: import React from 'react';
+import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import RegistrationScreen from './../../../src/app/registration/registration-screen';
+import LoginScreen from './../../../src/app/login/login-screen';
+import HomeScreen from './../../../src/app/home/home-screen';
+import HeaderNavigation from './../components/navigation/HeaderNavigation';
+import SideMenuNavigation from './../components/navigation/SideMenuNavigation';
+
+const HomeScreenStack = createStackNavigator({
+    HomeScreen: { screen: HomeScreen, navigationOptions: { header: () => null } },
+  }, {
+      navigationOptions: {
+        header: () => <HeaderNavigation />,
+      },
+    });
+const HomeScreenDrawer = createDrawerNavigator(
+  {
+    Home: {
+      screen: HomeScreenStack,
+    },
+    // If you want add some menu in drawer (side menu), you can put the list of screen below.
+    // example :
+    // Account: {
+    //    screen: accountListStack,
+    // },
+    // Transaction: {
+    //    screen: transactionListStack,
+    // },
+  },
+  {
+    contentComponent: SideMenuNavigation,
+    drawerWidth: 275,
+  },
+);
+
+const rootNavigationConfig = {
+  RegistrationScreen: { screen: RegistrationScreen, navigationOptions: { header: () => null } },
+  LoginScreen: { screen: LoginScreen, navigationOptions: { header: () => null } },
+  HomeScreen: { screen: HomeScreenDrawer },
+};
+
+export default rootNavigationConfig;
+2018-11-08T10:30:36.080Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\src\common\i18n\translations\en.json
+2018-11-08T10:30:36.080Z  info: {
+    "button": {
+        "submit": "Submit"
+    },
+    "label": {
+        "accountFrom": "From",
+        "destinationAccount": "Destination",
+        "amount": "Amount",
+        "note": "Note",
+        "transactionType": "Transaction Type",
+        "status": "Status",
+        "name": "Name",
+        "dateOfBirth": "Date Of Birth",
+        "salutation": "Salutation",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "selectDefault": "- Choose One -",
+        "logout": "Log Out"
+    },
+    "header": {
+"LoginScreen": "LoginScreen",
+"HomeScreen": "HomeScreen",
+        "ConfirmationScreen": "Confirmation Result",
+        "ResultScreen": "Transaction Result"
+    },
+    "sideMenu": {
+    },
+    "errorMessage": {
+        "passwordRequired": " Username or Password must be filled.",
+        "invalidPassword" : " Username or Password does not match, Please check it again."
+    },
+    "apiResponse": {
+        "2001": "Password is incorrect."
+    },
+    "message": {
+        "logout": "Are you sure want to logout?"
+    }
+}
+2018-11-08T10:30:36.082Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\registration\translation\translation.ejs
+2018-11-08T10:30:36.086Z  info: {
+    "button": {
+        "submit": "Submit"
+    },
+    "label": {
+        "accountFrom": "From",
+        "destinationAccount": "Destination",
+        "amount": "Amount",
+        "note": "Note",
+        "transactionType": "Transaction Type",
+        "status": "Status",
+        "name": "Name",
+        "dateOfBirth": "Date Of Birth",
+        "salutation": "Salutation",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "selectDefault": "- Choose One -",
+        "logout": "Log Out"
+    },
+    "header": {
+"RegistrationScreen": "RegistrationScreen",
+"LoginScreen": "LoginScreen",
+"HomeScreen": "HomeScreen",
+        "ConfirmationScreen": "Confirmation Result",
+        "ResultScreen": "Transaction Result"
+    },
+    "sideMenu": {
+    },
+    "errorMessage": {
+        "passwordRequired": " Username or Password must be filled.",
+        "invalidPassword" : " Username or Password does not match, Please check it again."
+    },
+    "apiResponse": {
+        "2001": "Password is incorrect."
+    },
+    "message": {
+        "logout": "Are you sure want to logout?"
+    }
+}
+2018-11-08T10:30:39.458Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps
+2018-11-08T10:30:39.483Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\home.json
+2018-11-08T10:30:39.483Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\login.json
+2018-11-08T10:30:39.484Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\master-detail.json
+2018-11-08T10:30:39.484Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\registration.json
+2018-11-08T10:30:39.484Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\transaction.json
+2018-11-08T10:30:42.417Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\transaction.json
+2018-11-08T10:31:10.434Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\transaction-screen.ejs
+2018-11-08T10:31:10.437Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\src\common\navigation\rootNavigationStackConfig.js
+2018-11-08T10:31:10.438Z  info: import React from 'react';
+import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import RegistrationScreen from './../../../src/app/registration/registration-screen';
+import LoginScreen from './../../../src/app/login/login-screen';
+import HomeScreen from './../../../src/app/home/home-screen';
+import HeaderNavigation from './../components/navigation/HeaderNavigation';
+import SideMenuNavigation from './../components/navigation/SideMenuNavigation';
+
+const HomeScreenStack = createStackNavigator({
+    HomeScreen: { screen: HomeScreen, navigationOptions: { header: () => null } },
+  }, {
+      navigationOptions: {
+        header: () => <HeaderNavigation />,
+      },
+    });
+const HomeScreenDrawer = createDrawerNavigator(
+  {
+    Home: {
+      screen: HomeScreenStack,
+    },
+    // If you want add some menu in drawer (side menu), you can put the list of screen below.
+    // example :
+    // Account: {
+    //    screen: accountListStack,
+    // },
+    // Transaction: {
+    //    screen: transactionListStack,
+    // },
+  },
+  {
+    contentComponent: SideMenuNavigation,
+    drawerWidth: 275,
+  },
+);
+
+const rootNavigationConfig = {
+  RegistrationScreen: { screen: RegistrationScreen, navigationOptions: { header: () => null } },
+  LoginScreen: { screen: LoginScreen, navigationOptions: { header: () => null } },
+  HomeScreen: { screen: HomeScreenDrawer },
+};
+
+export default rootNavigationConfig;
+2018-11-08T10:31:10.438Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\navigation\navigationGeneralScreen.ejs
+2018-11-08T10:31:10.438Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\navigation\importGeneralScreen.ejs
+2018-11-08T10:31:10.439Z  info: import React from 'react';
+import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import ConfirmationScreen from './../../../src/app/transaction/confirmation-screen';
+import ResultScreen from './../../../src/app/transaction/result-screen';
+import RegistrationScreen from './../../../src/app/registration/registration-screen';
+import LoginScreen from './../../../src/app/login/login-screen';
+import HomeScreen from './../../../src/app/home/home-screen';
+import HeaderNavigation from './../components/navigation/HeaderNavigation';
+import SideMenuNavigation from './../components/navigation/SideMenuNavigation';
+
+const HomeScreenStack = createStackNavigator({
+    HomeScreen: { screen: HomeScreen, navigationOptions: { header: () => null } },
+  }, {
+      navigationOptions: {
+        header: () => <HeaderNavigation />,
+      },
+    });
+const HomeScreenDrawer = createDrawerNavigator(
+  {
+    Home: {
+      screen: HomeScreenStack,
+    },
+    // If you want add some menu in drawer (side menu), you can put the list of screen below.
+    // example :
+    // Account: {
+    //    screen: accountListStack,
+    // },
+    // Transaction: {
+    //    screen: transactionListStack,
+    // },
+  },
+  {
+    contentComponent: SideMenuNavigation,
+    drawerWidth: 275,
+  },
+);
+
+const rootNavigationConfig = {
+  ConfirmationScreen: { screen: ConfirmationScreen },
+  ResultScreen: { screen: ResultScreen },
+  RegistrationScreen: { screen: RegistrationScreen, navigationOptions: { header: () => null } },
+  LoginScreen: { screen: LoginScreen, navigationOptions: { header: () => null } },
+  HomeScreen: { screen: HomeScreenDrawer },
+};
+
+export default rootNavigationConfig;
+2018-11-08T10:31:10.441Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\confirmation-screen.ejs
+2018-11-08T10:31:10.443Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\result-screen.ejs
+2018-11-08T10:31:10.444Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\components\transaction-form.ejs
+2018-11-08T10:31:10.446Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\components\transaction-authentication.ejs
+2018-11-08T10:31:10.447Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\components\confirmation-card.ejs
+2018-11-08T10:31:10.449Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\components\confirmation.ejs
+2018-11-08T10:31:10.450Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\src\common\store\reducer\index.js
+2018-11-08T10:31:10.451Z  info: import { combineReducers } from 'redux';
+import { AtiNavigationReducer } from 'ati-navigation';
+import { reducer as i18n } from 'ati-react-native-redux-i18n';
+import { formReducer } from 'ati-redux-form';
+import navHeaderReducer from './navHeaderReducer';
+import navigationReducer from './../../navigation/reducer';
+import PopupReducer from './../../../modules/popup/store/popup-reducer';
+import RegistrationReducer from './../../../../src/modules/registration/store/registration-reducer';
+import AuthenticationReducer from './../../../../src/modules/authentication/store/authentication-reducer';
+import AccountReducer from './../../../../src/modules/account/store/account-reducer';
+
+const appReducers = combineReducers({
+    navHeader: navHeaderReducer,
+    nav: navigationReducer,
+    AtiNavigationReducer,
+    i18n,
+    form: formReducer,
+    popup: PopupReducer,
+registration: RegistrationReducer,
+auth: AuthenticationReducer,
+account: AccountReducer,
+});
+
+export default appReducers;
+
+2018-11-08T10:31:10.451Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\store\importReducer.ejs
+2018-11-08T10:31:10.451Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\store\combineReducers.ejs
+2018-11-08T10:31:10.452Z  info: import { combineReducers } from 'redux';
+import { AtiNavigationReducer } from 'ati-navigation';
+import { reducer as i18n } from 'ati-react-native-redux-i18n';
+import { formReducer } from 'ati-redux-form';
+import navHeaderReducer from './navHeaderReducer';
+import navigationReducer from './../../navigation/reducer';
+import PopupReducer from './../../../modules/popup/store/popup-reducer';
+import TransactionReducer from './../../../../src/modules/transaction/store/transaction-reducer';
+import RegistrationReducer from './../../../../src/modules/registration/store/registration-reducer';
+import AuthenticationReducer from './../../../../src/modules/authentication/store/authentication-reducer';
+import AccountReducer from './../../../../src/modules/account/store/account-reducer';
+
+const appReducers = combineReducers({
+    navHeader: navHeaderReducer,
+    nav: navigationReducer,
+    AtiNavigationReducer,
+    i18n,
+    form: formReducer,
+    popup: PopupReducer,
+transaction: TransactionReducer,
+registration: RegistrationReducer,
+auth: AuthenticationReducer,
+account: AccountReducer,
+});
+
+export default appReducers;
+
+2018-11-08T10:31:10.453Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\store\transaction-action-type.ejs
+2018-11-08T10:31:10.454Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\store\transaction-action.ejs
+2018-11-08T10:31:10.455Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\store\transaction-reducer.ejs
+2018-11-08T10:31:15.268Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\account\components\account-card.ejs
+2018-11-08T10:31:16.250Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\account\container\account-card-swiper.ejs
+2018-11-08T10:31:16.628Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\account\store\account-action-type.ejs
+2018-11-08T10:31:16.939Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\account\store\account-action.ejs
+2018-11-08T10:31:17.265Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\account\store\account-reducer.ejs
+2018-11-08T10:31:17.267Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\src\common\navigation\rootNavigationStackConfig.js
+2018-11-08T10:31:17.268Z  info: import React from 'react';
+import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import ConfirmationScreen from './../../../src/app/transaction/confirmation-screen';
+import ResultScreen from './../../../src/app/transaction/result-screen';
+import RegistrationScreen from './../../../src/app/registration/registration-screen';
+import LoginScreen from './../../../src/app/login/login-screen';
+import HomeScreen from './../../../src/app/home/home-screen';
+import HeaderNavigation from './../components/navigation/HeaderNavigation';
+import SideMenuNavigation from './../components/navigation/SideMenuNavigation';
+
+const HomeScreenStack = createStackNavigator({
+    HomeScreen: { screen: HomeScreen, navigationOptions: { header: () => null } },
+  }, {
+      navigationOptions: {
+        header: () => <HeaderNavigation />,
+      },
+    });
+const HomeScreenDrawer = createDrawerNavigator(
+  {
+    Home: {
+      screen: HomeScreenStack,
+    },
+    // If you want add some menu in drawer (side menu), you can put the list of screen below.
+    // example :
+    // Account: {
+    //    screen: accountListStack,
+    // },
+    // Transaction: {
+    //    screen: transactionListStack,
+    // },
+  },
+  {
+    contentComponent: SideMenuNavigation,
+    drawerWidth: 275,
+  },
+);
+
+const rootNavigationConfig = {
+  ConfirmationScreen: { screen: ConfirmationScreen },
+  ResultScreen: { screen: ResultScreen },
+  RegistrationScreen: { screen: RegistrationScreen, navigationOptions: { header: () => null } },
+  LoginScreen: { screen: LoginScreen, navigationOptions: { header: () => null } },
+  HomeScreen: { screen: HomeScreenDrawer },
+};
+
+export default rootNavigationConfig;
+2018-11-08T10:31:17.268Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\navigation\navigationTransactionScreen.ejs
+2018-11-08T10:31:17.271Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\navigation\importTransactionScreen.ejs
+2018-11-08T10:31:17.281Z  info: import React from 'react';
+import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import TransactionScreen from './../../../src/app/transaction/transaction-screen';
+import ConfirmationScreen from './../../../src/app/transaction/confirmation-screen';
+import ResultScreen from './../../../src/app/transaction/result-screen';
+import RegistrationScreen from './../../../src/app/registration/registration-screen';
+import LoginScreen from './../../../src/app/login/login-screen';
+import HomeScreen from './../../../src/app/home/home-screen';
+import HeaderNavigation from './../components/navigation/HeaderNavigation';
+import SideMenuNavigation from './../components/navigation/SideMenuNavigation';
+
+const HomeScreenStack = createStackNavigator({
+    HomeScreen: { screen: HomeScreen, navigationOptions: { header: () => null } },
+  }, {
+      navigationOptions: {
+        header: () => <HeaderNavigation />,
+      },
+    });
+const HomeScreenDrawer = createDrawerNavigator(
+  {
+    Home: {
+      screen: HomeScreenStack,
+    },
+    // If you want add some menu in drawer (side menu), you can put the list of screen below.
+    // example :
+    // Account: {
+    //    screen: accountListStack,
+    // },
+    // Transaction: {
+    //    screen: transactionListStack,
+    // },
+  },
+  {
+    contentComponent: SideMenuNavigation,
+    drawerWidth: 275,
+  },
+);
+
+const rootNavigationConfig = {
+  TransactionScreen: { screen: TransactionScreen },
+  ConfirmationScreen: { screen: ConfirmationScreen },
+  ResultScreen: { screen: ResultScreen },
+  RegistrationScreen: { screen: RegistrationScreen, navigationOptions: { header: () => null } },
+  LoginScreen: { screen: LoginScreen, navigationOptions: { header: () => null } },
+  HomeScreen: { screen: HomeScreenDrawer },
+};
+
+export default rootNavigationConfig;
+2018-11-08T10:31:17.289Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\src\common\i18n\translations\en.json
+2018-11-08T10:31:17.289Z  info: {
+    "button": {
+        "submit": "Submit"
+    },
+    "label": {
+        "accountFrom": "From",
+        "destinationAccount": "Destination",
+        "amount": "Amount",
+        "note": "Note",
+        "transactionType": "Transaction Type",
+        "status": "Status",
+        "name": "Name",
+        "dateOfBirth": "Date Of Birth",
+        "salutation": "Salutation",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "selectDefault": "- Choose One -",
+        "logout": "Log Out"
+    },
+    "header": {
+"RegistrationScreen": "RegistrationScreen",
+"LoginScreen": "LoginScreen",
+"HomeScreen": "HomeScreen",
+        "ConfirmationScreen": "Confirmation Result",
+        "ResultScreen": "Transaction Result"
+    },
+    "sideMenu": {
+    },
+    "errorMessage": {
+        "passwordRequired": " Username or Password must be filled.",
+        "invalidPassword" : " Username or Password does not match, Please check it again."
+    },
+    "apiResponse": {
+        "2001": "Password is incorrect."
+    },
+    "message": {
+        "logout": "Are you sure want to logout?"
+    }
+}
+2018-11-08T10:31:17.290Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\translation\translation.ejs
+2018-11-08T10:31:17.290Z  info: {
+    "button": {
+        "submit": "Submit"
+    },
+    "label": {
+        "accountFrom": "From",
+        "destinationAccount": "Destination",
+        "amount": "Amount",
+        "note": "Note",
+        "transactionType": "Transaction Type",
+        "status": "Status",
+        "name": "Name",
+        "dateOfBirth": "Date Of Birth",
+        "salutation": "Salutation",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "selectDefault": "- Choose One -",
+        "logout": "Log Out"
+    },
+    "header": {
+"TransactionScreen": "TransactionScreen",
+"RegistrationScreen": "RegistrationScreen",
+"LoginScreen": "LoginScreen",
+"HomeScreen": "HomeScreen",
+        "ConfirmationScreen": "Confirmation Result",
+        "ResultScreen": "Transaction Result"
+    },
+    "sideMenu": {
+    },
+    "errorMessage": {
+        "passwordRequired": " Username or Password must be filled.",
+        "invalidPassword" : " Username or Password does not match, Please check it again."
+    },
+    "apiResponse": {
+        "2001": "Password is incorrect."
+    },
+    "message": {
+        "logout": "Are you sure want to logout?"
+    }
+}
+2018-11-08T10:31:20.375Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps
+2018-11-08T10:31:20.380Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\home.json
+2018-11-08T10:31:20.380Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\login.json
+2018-11-08T10:31:20.381Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\master-detail.json
+2018-11-08T10:31:20.381Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\registration.json
+2018-11-08T10:31:20.381Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\transaction.json
+2018-11-08T10:33:14.510Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\transaction.json
+2018-11-08T10:33:35.369Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\transaction-screen.ejs
+2018-11-08T10:33:35.760Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\result-screen.ejs
+2018-11-08T10:33:35.771Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\components\transaction-form.ejs
+2018-11-08T10:33:36.105Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\components\transaction-authentication.ejs
+2018-11-08T10:33:36.316Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\components\confirmation-card.ejs
+2018-11-08T10:33:36.546Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\components\confirmation.ejs
+2018-11-08T10:33:36.795Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\store\transaction-action-type.ejs
+2018-11-08T10:33:37.014Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\store\transaction-action.ejs
+2018-11-08T10:33:37.235Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\store\transaction-reducer.ejs
+2018-11-08T10:33:37.472Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\account\components\account-card.ejs
+2018-11-08T10:33:37.696Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\account\container\account-card-swiper.ejs
+2018-11-08T10:33:37.896Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\account\store\account-action-type.ejs
+2018-11-08T10:33:38.122Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\account\store\account-action.ejs
+2018-11-08T10:33:38.385Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\account\store\account-reducer.ejs
+2018-11-08T10:33:38.387Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\src\common\navigation\rootNavigationStackConfig.js
+2018-11-08T10:33:38.388Z  info: import React from 'react';
+import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import TransactionScreen from './../../../src/app/transaction/transaction-screen';
+import ConfirmationScreen from './../../../src/app/transaction/confirmation-screen';
+import ResultScreen from './../../../src/app/transaction/result-screen';
+import RegistrationScreen from './../../../src/app/registration/registration-screen';
+import LoginScreen from './../../../src/app/login/login-screen';
+import HomeScreen from './../../../src/app/home/home-screen';
+import HeaderNavigation from './../components/navigation/HeaderNavigation';
+import SideMenuNavigation from './../components/navigation/SideMenuNavigation';
+
+const HomeScreenStack = createStackNavigator({
+    HomeScreen: { screen: HomeScreen, navigationOptions: { header: () => null } },
+  }, {
+      navigationOptions: {
+        header: () => <HeaderNavigation />,
+      },
+    });
+const HomeScreenDrawer = createDrawerNavigator(
+  {
+    Home: {
+      screen: HomeScreenStack,
+    },
+    // If you want add some menu in drawer (side menu), you can put the list of screen below.
+    // example :
+    // Account: {
+    //    screen: accountListStack,
+    // },
+    // Transaction: {
+    //    screen: transactionListStack,
+    // },
+  },
+  {
+    contentComponent: SideMenuNavigation,
+    drawerWidth: 275,
+  },
+);
+
+const rootNavigationConfig = {
+  TransactionScreen: { screen: TransactionScreen },
+  ConfirmationScreen: { screen: ConfirmationScreen },
+  ResultScreen: { screen: ResultScreen },
+  RegistrationScreen: { screen: RegistrationScreen, navigationOptions: { header: () => null } },
+  LoginScreen: { screen: LoginScreen, navigationOptions: { header: () => null } },
+  HomeScreen: { screen: HomeScreenDrawer },
+};
+
+export default rootNavigationConfig;
+2018-11-08T10:33:38.388Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\navigation\navigationTransactionScreen.ejs
+2018-11-08T10:33:38.388Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\navigation\importTransactionScreen.ejs
+2018-11-08T10:33:38.390Z  info: import React from 'react';
+import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import TransactionScreen from './../../../src/app/transaction/transaction-screen';
+import TransactionScreen from './../../../src/app/transaction/transaction-screen';
+import ConfirmationScreen from './../../../src/app/transaction/confirmation-screen';
+import ResultScreen from './../../../src/app/transaction/result-screen';
+import RegistrationScreen from './../../../src/app/registration/registration-screen';
+import LoginScreen from './../../../src/app/login/login-screen';
+import HomeScreen from './../../../src/app/home/home-screen';
+import HeaderNavigation from './../components/navigation/HeaderNavigation';
+import SideMenuNavigation from './../components/navigation/SideMenuNavigation';
+
+const HomeScreenStack = createStackNavigator({
+    HomeScreen: { screen: HomeScreen, navigationOptions: { header: () => null } },
+  }, {
+      navigationOptions: {
+        header: () => <HeaderNavigation />,
+      },
+    });
+const HomeScreenDrawer = createDrawerNavigator(
+  {
+    Home: {
+      screen: HomeScreenStack,
+    },
+    // If you want add some menu in drawer (side menu), you can put the list of screen below.
+    // example :
+    // Account: {
+    //    screen: accountListStack,
+    // },
+    // Transaction: {
+    //    screen: transactionListStack,
+    // },
+  },
+  {
+    contentComponent: SideMenuNavigation,
+    drawerWidth: 275,
+  },
+);
+
+const rootNavigationConfig = {
+  TransactionScreen: { screen: TransactionScreen },
+  TransactionScreen: { screen: TransactionScreen },
+  ConfirmationScreen: { screen: ConfirmationScreen },
+  ResultScreen: { screen: ResultScreen },
+  RegistrationScreen: { screen: RegistrationScreen, navigationOptions: { header: () => null } },
+  LoginScreen: { screen: LoginScreen, navigationOptions: { header: () => null } },
+  HomeScreen: { screen: HomeScreenDrawer },
+};
+
+export default rootNavigationConfig;
+2018-11-08T10:33:38.392Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\src\common\i18n\translations\en.json
+2018-11-08T10:33:38.393Z  info: {
+    "button": {
+        "submit": "Submit"
+    },
+    "label": {
+        "accountFrom": "From",
+        "destinationAccount": "Destination",
+        "amount": "Amount",
+        "note": "Note",
+        "transactionType": "Transaction Type",
+        "status": "Status",
+        "name": "Name",
+        "dateOfBirth": "Date Of Birth",
+        "salutation": "Salutation",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "selectDefault": "- Choose One -",
+        "logout": "Log Out"
+    },
+    "header": {
+"TransactionScreen": "TransactionScreen",
+"RegistrationScreen": "RegistrationScreen",
+"LoginScreen": "LoginScreen",
+"HomeScreen": "HomeScreen",
+        "ConfirmationScreen": "Confirmation Result",
+        "ResultScreen": "Transaction Result"
+    },
+    "sideMenu": {
+    },
+    "errorMessage": {
+        "passwordRequired": " Username or Password must be filled.",
+        "invalidPassword" : " Username or Password does not match, Please check it again."
+    },
+    "apiResponse": {
+        "2001": "Password is incorrect."
+    },
+    "message": {
+        "logout": "Are you sure want to logout?"
+    }
+}
+2018-11-08T10:33:38.393Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\transaction\translation\translation.ejs
+2018-11-08T10:33:38.394Z  info: {
+    "button": {
+        "submit": "Submit"
+    },
+    "label": {
+        "accountFrom": "From",
+        "destinationAccount": "Destination",
+        "amount": "Amount",
+        "note": "Note",
+        "transactionType": "Transaction Type",
+        "status": "Status",
+        "name": "Name",
+        "dateOfBirth": "Date Of Birth",
+        "salutation": "Salutation",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "selectDefault": "- Choose One -",
+        "logout": "Log Out"
+    },
+    "header": {
+"TransactionScreen": "TransactionScreen",
+"TransactionScreen": "TransactionScreen",
+"RegistrationScreen": "RegistrationScreen",
+"LoginScreen": "LoginScreen",
+"HomeScreen": "HomeScreen",
+        "ConfirmationScreen": "Confirmation Result",
+        "ResultScreen": "Transaction Result"
+    },
+    "sideMenu": {
+    },
+    "errorMessage": {
+        "passwordRequired": " Username or Password must be filled.",
+        "invalidPassword" : " Username or Password does not match, Please check it again."
+    },
+    "apiResponse": {
+        "2001": "Password is incorrect."
+    },
+    "message": {
+        "logout": "Are you sure want to logout?"
+    }
+}
+2018-11-08T10:33:41.371Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps
+2018-11-08T10:33:41.374Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\home.json
+2018-11-08T10:33:41.375Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\login.json
+2018-11-08T10:33:41.375Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\master-detail.json
+2018-11-08T10:33:41.375Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\registration.json
+2018-11-08T10:33:41.375Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\transaction.json
+2018-11-08T10:33:43.856Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\steps\master-detail.json
+2018-11-08T10:34:16.789Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\master-detail\list-screen.ejs
+2018-11-08T10:34:16.794Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\master-detail\components\list.ejs
+2018-11-08T10:34:16.796Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\master-detail\detail-screen.ejs
+2018-11-08T10:34:16.811Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\master-detail\components\detail.ejs
+2018-11-08T10:34:16.819Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\master-detail\components\history.ejs
+2018-11-08T10:34:17.895Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\account\store\account-reducer.ejs
+2018-11-08T10:34:18.112Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\account\store\account-action.ejs
+2018-11-08T10:34:18.300Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\account\store\account-action-type.ejs
+2018-11-08T10:34:18.304Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\src\common\navigation\rootNavigationStackConfig.js
+2018-11-08T10:34:18.326Z  info: import React from 'react';
+import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import TransactionScreen from './../../../src/app/transaction/transaction-screen';
+import TransactionScreen from './../../../src/app/transaction/transaction-screen';
+import ConfirmationScreen from './../../../src/app/transaction/confirmation-screen';
+import ResultScreen from './../../../src/app/transaction/result-screen';
+import RegistrationScreen from './../../../src/app/registration/registration-screen';
+import LoginScreen from './../../../src/app/login/login-screen';
+import HomeScreen from './../../../src/app/home/home-screen';
+import HeaderNavigation from './../components/navigation/HeaderNavigation';
+import SideMenuNavigation from './../components/navigation/SideMenuNavigation';
+
+const HomeScreenStack = createStackNavigator({
+    HomeScreen: { screen: HomeScreen, navigationOptions: { header: () => null } },
+  }, {
+      navigationOptions: {
+        header: () => <HeaderNavigation />,
+      },
+    });
+const HomeScreenDrawer = createDrawerNavigator(
+  {
+    Home: {
+      screen: HomeScreenStack,
+    },
+    // If you want add some menu in drawer (side menu), you can put the list of screen below.
+    // example :
+    // Account: {
+    //    screen: accountListStack,
+    // },
+    // Transaction: {
+    //    screen: transactionListStack,
+    // },
+  },
+  {
+    contentComponent: SideMenuNavigation,
+    drawerWidth: 275,
+  },
+);
+
+const rootNavigationConfig = {
+  TransactionScreen: { screen: TransactionScreen },
+  TransactionScreen: { screen: TransactionScreen },
+  ConfirmationScreen: { screen: ConfirmationScreen },
+  ResultScreen: { screen: ResultScreen },
+  RegistrationScreen: { screen: RegistrationScreen, navigationOptions: { header: () => null } },
+  LoginScreen: { screen: LoginScreen, navigationOptions: { header: () => null } },
+  HomeScreen: { screen: HomeScreenDrawer },
+};
+
+export default rootNavigationConfig;
+2018-11-08T10:34:18.326Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\master-detail\navigation\rootNavigationStackConfig.ejs
+2018-11-08T10:34:18.327Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\master-detail\navigation\importRootNavigationStackConfig.ejs
+2018-11-08T10:34:18.329Z  info: import React from 'react';
+import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
+import ListScreen from './../../../src/app/account/list-screen';
+import DetailScreen from './../../../src/app/account/detail-screen';
+import TransactionScreen from './../../../src/app/transaction/transaction-screen';
+import TransactionScreen from './../../../src/app/transaction/transaction-screen';
+import ConfirmationScreen from './../../../src/app/transaction/confirmation-screen';
+import ResultScreen from './../../../src/app/transaction/result-screen';
+import RegistrationScreen from './../../../src/app/registration/registration-screen';
+import LoginScreen from './../../../src/app/login/login-screen';
+import HomeScreen from './../../../src/app/home/home-screen';
+import HeaderNavigation from './../components/navigation/HeaderNavigation';
+import SideMenuNavigation from './../components/navigation/SideMenuNavigation';
+
+const HomeScreenStack = createStackNavigator({
+    HomeScreen: { screen: HomeScreen, navigationOptions: { header: () => null } },
+  }, {
+      navigationOptions: {
+        header: () => <HeaderNavigation />,
+      },
+    });
+const HomeScreenDrawer = createDrawerNavigator(
+  {
+    Home: {
+      screen: HomeScreenStack,
+    },
+    // If you want add some menu in drawer (side menu), you can put the list of screen below.
+    // example :
+    // Account: {
+    //    screen: accountListStack,
+    // },
+    // Transaction: {
+    //    screen: transactionListStack,
+    // },
+  },
+  {
+    contentComponent: SideMenuNavigation,
+    drawerWidth: 275,
+  },
+);
+
+const rootNavigationConfig = {
+ListScreen: { screen: ListScreen },
+DetailScreen: { screen: DetailScreen },
+  TransactionScreen: { screen: TransactionScreen },
+  TransactionScreen: { screen: TransactionScreen },
+  ConfirmationScreen: { screen: ConfirmationScreen },
+  ResultScreen: { screen: ResultScreen },
+  RegistrationScreen: { screen: RegistrationScreen, navigationOptions: { header: () => null } },
+  LoginScreen: { screen: LoginScreen, navigationOptions: { header: () => null } },
+  HomeScreen: { screen: HomeScreenDrawer },
+};
+
+export default rootNavigationConfig;
+2018-11-08T10:34:18.334Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\src\common\i18n\translations\en.json
+2018-11-08T10:34:18.335Z  info: {
+    "button": {
+        "submit": "Submit"
+    },
+    "label": {
+        "accountFrom": "From",
+        "destinationAccount": "Destination",
+        "amount": "Amount",
+        "note": "Note",
+        "transactionType": "Transaction Type",
+        "status": "Status",
+        "name": "Name",
+        "dateOfBirth": "Date Of Birth",
+        "salutation": "Salutation",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "selectDefault": "- Choose One -",
+        "logout": "Log Out"
+    },
+    "header": {
+"TransactionScreen": "TransactionScreen",
+"TransactionScreen": "TransactionScreen",
+"RegistrationScreen": "RegistrationScreen",
+"LoginScreen": "LoginScreen",
+"HomeScreen": "HomeScreen",
+        "ConfirmationScreen": "Confirmation Result",
+        "ResultScreen": "Transaction Result"
+    },
+    "sideMenu": {
+    },
+    "errorMessage": {
+        "passwordRequired": " Username or Password must be filled.",
+        "invalidPassword" : " Username or Password does not match, Please check it again."
+    },
+    "apiResponse": {
+        "2001": "Password is incorrect."
+    },
+    "message": {
+        "logout": "Are you sure want to logout?"
+    }
+}
+2018-11-08T10:34:18.336Z  info: D:\PRIBADI\CAMPUS\Semester 6\PPSI\Aplication\boilerplate\boilerplate\templates\master-detail\translation\translation.ejs
+2018-11-08T10:34:18.338Z  info: {
+    "button": {
+        "submit": "Submit"
+    },
+    "label": {
+        "accountFrom": "From",
+        "destinationAccount": "Destination",
+        "amount": "Amount",
+        "note": "Note",
+        "transactionType": "Transaction Type",
+        "status": "Status",
+        "name": "Name",
+        "dateOfBirth": "Date Of Birth",
+        "salutation": "Salutation",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "selectDefault": "- Choose One -",
+        "logout": "Log Out"
+    },
+    "header": {
+"ListScreen": "ListScreen",
+"DetailScreen": "DetailScreen",
+"TransactionScreen": "TransactionScreen",
+"TransactionScreen": "TransactionScreen",
+"RegistrationScreen": "RegistrationScreen",
+"LoginScreen": "LoginScreen",
+"HomeScreen": "HomeScreen",
+        "ConfirmationScreen": "Confirmation Result",
+        "ResultScreen": "Transaction Result"
+    },
+    "sideMenu": {
+    },
+    "errorMessage": {
+        "passwordRequired": " Username or Password must be filled.",
+        "invalidPassword" : " Username or Password does not match, Please check it again."
+    },
+    "apiResponse": {
+        "2001": "Password is incorrect."
+    },
+    "message": {
+        "logout": "Are you sure want to logout?"
+    }
+}

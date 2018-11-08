@@ -1,0 +1,75 @@
+/**
+ * This screen will display an example list of transactions.
+ */
+
+import React, { Component } from 'react';
+import { Left, Body, Container } from 'native-base';
+import { View, ScrollView } from 'react-native';
+import PropTypes from 'prop-types';
+import { AtiText, AtiList, AtiListItem, AtiTextMask } from 'ati-ui-elements';
+import { connect } from 'react-redux';
+import * as action from '../../../modules/account/store/account-action';
+import navigate from '../../../common/navigation/action';
+import styles from '../../../../assets/styles/default.style';
+
+class <%=func.camelCase(listComponentFileName, {pascalCase: true})%> extends Component {
+    /**
+     * this functon will dispatch to the detail of data on screen AccountDetailScreen.
+     * See details on file account-action.js
+     * @param {*} details
+     */
+    onViewDetail(details) {
+        if (this.props.events.onPress) {
+            this.props.events.onPress(details);
+        }
+    }
+
+    render() {
+        return (
+            <Container style={styles.containerBackground}>
+                <ScrollView>
+                    <AtiList
+                        dataArray={this.props.dataArray}
+                        renderRow={
+                        item =>
+                            (
+                            <AtiListItem events={{ onPress: () => this.onViewDetail(item) }}>
+                                <Left>
+                                    <View>
+                                        <AtiText style={styles.labelList}>Account Number</AtiText>
+                                        <AtiText style={styles.labelList}>Balance Account</AtiText>
+                                    </View>
+                                </Left>
+                                <Body>
+                                    <View>
+                                        <AtiTextMask style={styles.valueList} type="credit-card">{item.accountNumber}</AtiTextMask>
+                                        <AtiTextMask style={styles.valueList} type="money">{item.amount}</AtiTextMask>
+                                    </View>
+                                </Body>
+                            </AtiListItem>
+                            )
+                        }
+                    />
+                </ScrollView>
+            </Container>
+        );
+    }
+}
+
+<%=func.camelCase(listComponentFileName, {pascalCase: true})%>.defaultProps = {
+    dataArray: [],
+    events: {},
+};
+
+<%=func.camelCase(listComponentFileName, {pascalCase: true})%>.propTypes = {
+    /**
+     * source data that will be loaded
+     */
+    dataArray: PropTypes.array,
+    /**
+     * return display content of card
+     */
+    events: PropTypes.object,
+};
+
+export default <%=func.camelCase(listComponentFileName, {pascalCase: true})%>;
