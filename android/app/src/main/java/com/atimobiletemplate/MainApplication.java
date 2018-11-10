@@ -1,4 +1,4 @@
-package com.atimobiletemplate;
+package com.speakup;
 
 import android.app.Application;
 
@@ -8,6 +8,7 @@ import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
 import com.facebook.soloader.SoLoader;
+
 
 import java.util.Arrays;
 import java.util.List;

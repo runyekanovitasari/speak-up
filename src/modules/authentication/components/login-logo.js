@@ -1,23 +1,14 @@
-/**
- * This component will display and configure your logo of aplication. You can modify this file if needed.
- */
- 
 import React, { Component } from 'react';
-import { AtiText } from 'ati-ui-elements';
 import { View, Image } from 'react-native';
 import styles from './../../../../assets/styles/default.style';
-import logoPocket from './../../../../assets/img/pocket.png';
+import logo from './../../../../assets/img/logoApp.png';
 
 class LoginLogo extends Component {
     render() {
         return (
             <View style={styles.logoContainer}>
                 <View style={styles.viewContainer}>
-                    <Image style={styles.image} resizeMode="contain" source={logoPocket} />
-                </View>
-                <View style={styles.textContainer}>
-                    <AtiText style={styles.title_pocket}>Pocket</AtiText>
-                    <AtiText style={styles.title_bank}>Bank</AtiText>
+                    <Image style={styles.image} resizeMode="contain" source={logo} />
                 </View>
             </View>
         );

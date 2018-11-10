@@ -54,7 +54,8 @@ export default class App extends Component {
 
 
   render() {
-    StatusBar.setBackgroundColor(ColorProperties.TOSCA, true);
+    StatusBar.setBackgroundColor(ColorProperties.SILVER, true);
+    StatusBar.setBarStyle('dark-content', true);
     return (
       <AtiWebConsoleProvider
         services={services}

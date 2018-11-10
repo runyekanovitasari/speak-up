@@ -73,7 +73,7 @@ class CentralizedPopup extends Component {
           visible={visibleProgress}
           title={title}
           message={message}
-          activityIndicatorColor={ColorProperties.TOSCA}
+          activityIndicatorColor={ColorProperties.NAVY}
           activityIndicatorSize={30}
         />
       </React.Fragment>

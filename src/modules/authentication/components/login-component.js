@@ -1,9 +1,3 @@
-/**
- * This component just handle style/display of login screen and receive value of property from LoginForm
- * tag <LoginLogo/> will call screen that contain a logo
- * tag <LoginForm {...loginboxParam} /> will call screen that contains field box of login also automatically set the value of parameter loginboxParam
- */
-
 import { View } from 'react-native';
 import React, { Component } from 'react';
 import LoginLogo from './../components/login-logo';

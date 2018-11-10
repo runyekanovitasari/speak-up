@@ -12,21 +12,11 @@ import styles from './../../../../assets/styles/default.style';
 const { width, height } = Dimensions.get('window');
 
 class AccountCard extends Component {
-
-     /**
-     * Initialize the data that is going to change.
-     * You should initialize state in the constructor, and then call setState when you want to change it.
-     */
     state = {
         currentIndex: 0,
     }
 
 
-    /**
-     * This function will rendered left arrow icon based on the index of data.
-     * If the index of data 0, the return of left arrow icon will be white color (hide).
-     * And if the index of data != 0 the return of left arrow will be displayed.
-     */
     renderLeftArrow = (accountList) => {
         if (accountList === 0) {
             return (
@@ -42,11 +32,6 @@ class AccountCard extends Component {
         );
     }
 
-     /**
-     * This function will rendered right arrow icon based on the index of data.
-     * If the index of data 0, the return of right arrow icon will be white color (hide).
-     * And if the index of data != 0 the return of right arrow will be displayed.
-     */
     renderRightArrow = (index, accountList) => {
         if (index === accountList.length - 1) {
             return (
@@ -62,9 +47,6 @@ class AccountCard extends Component {
         );
     }
 
-    /**
-     * This function will rendered componenent of carousel (the wraper of datas) based on the value data of redux.
-     */
     renderCarousel = () => {
         if (this.props.reduxForm) {
             return (

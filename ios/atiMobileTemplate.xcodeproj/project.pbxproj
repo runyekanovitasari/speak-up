@@ -5,14 +5,13 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
 		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
-		00E356F31AD99517003FC87E /* atiMobileTemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* atiMobileTemplateTests.m */; };
+		00E356F31AD99517003FC87E /* speakupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* speakupTests.m */; };
 		0B296873A9BD42EB87E936B0 /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DEF366C9F74E1DA4AADAC7 /* libRNI18n.a */; };
 		0E2C650231B242ADBDFE1896 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77576608449D4DF0BFC9ED7F /* Octicons.ttf */; };
 		11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
@@ -38,7 +37,7 @@
 		2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E941DF850E9000B6D8A /* libRCTText-tvOS.a */; };
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
-		2DCD954D1E0B4F2C00145EB5 /* atiMobileTemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* atiMobileTemplateTests.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* speakupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* speakupTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		47FD604E7CB8473982146E40 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76E1A8F70C4C45968B38A1A7 /* Ionicons.ttf */; };
 		53693F85B4944562957D0F37 /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0CEFF1829FBE4B2B9466B9C8 /* Roboto_medium.ttf */; };
@@ -58,6 +57,7 @@
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		C3D6B4A4F205433F9CBED609 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32AD81AEF8AB48C188AD1E8A /* SimpleLineIcons.ttf */; };
 		F07E3C91EB0A404DA9C33B8F /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAECD77544C04272A91F97C0 /* Feather.ttf */; };
+		58286DCB39464F25A6FEE2DC /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 176F6349C60E453DBBD32020 /* libSplashScreen.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,7 +101,7 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = atiMobileTemplate;
+			remoteInfo = speakup;
 		};
 		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -143,7 +143,7 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "atiMobileTemplate-tvOS";
+			remoteInfo = "speakup-tvOS";
 		};
 		2D16E6711FA4F8DC00B85C8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -357,24 +357,24 @@
 		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
 		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = "../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj"; sourceTree = "<group>"; };
 		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* atiMobileTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = atiMobileTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* speakupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = speakupTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* atiMobileTemplateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = atiMobileTemplateTests.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* speakupTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = speakupTests.m; sourceTree = "<group>"; };
 		0CEFF1829FBE4B2B9466B9C8 /* Roboto_medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto_medium.ttf; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* atiMobileTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = atiMobileTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = atiMobileTemplate/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = atiMobileTemplate/AppDelegate.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* speakup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = speakup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = speakup/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = speakup/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = atiMobileTemplate/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = atiMobileTemplate/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = atiMobileTemplate/main.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = speakup/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = speakup/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = speakup/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		1E57C245125840579E649D3E /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
 		276965F09C0E429180BE0DD1 /* CariIstri-tvOS.app */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.application; path = "CariIstri-tvOS.app"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* atiMobileTemplate-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "atiMobileTemplate-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* atiMobileTemplate-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "atiMobileTemplate-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E47B1E0B4A5D006451C7 /* speakup-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "speakup-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* speakup-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "speakup-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AD81AEF8AB48C188AD1E8A /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		47BB4526F9AF4DEE9F209139 /* CariIstri.app */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CariIstri.app; sourceTree = "<group>"; };
@@ -398,6 +398,8 @@
 		D9FC57B3D52B4429B2B8679D /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		EDBE48B2AB4D48219D4E8384 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		F862C88E7EBB4CF1B72A7A55 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		B18CCEF86D9F44C582C36A0B /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; name = "SplashScreen.xcodeproj"; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		176F6349C60E453DBBD32020 /* libSplashScreen.a */ = {isa = PBXFileReference; name = "libSplashScreen.a"; path = "libSplashScreen.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -428,6 +430,7 @@
 				9789E522303846ED99C1B6EC /* CariIstri.app in Frameworks */,
 				2471E1E91AF64DC9832F10A8 /* CariIstriTests.xctest in Frameworks */,
 				0B296873A9BD42EB87E936B0 /* libRNI18n.a in Frameworks */,
+				58286DCB39464F25A6FEE2DC /* libSplashScreen.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,13 +505,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		00E356EF1AD99517003FC87E /* atiMobileTemplateTests */ = {
+		00E356EF1AD99517003FC87E /* speakupTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* atiMobileTemplateTests.m */,
+				00E356F21AD99517003FC87E /* speakupTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = atiMobileTemplateTests;
+			path = speakupTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -539,7 +542,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* atiMobileTemplate */ = {
+		13B07FAE1A68108700A75B9A /* speakup */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -550,7 +553,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = atiMobileTemplate;
+			name = speakup;
 			sourceTree = "<group>";
 		};
 		146834001AC3E56700842450 /* Products */ = {
@@ -661,6 +664,7 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				D3843CF32AC144E495693F68 /* RNI18n.xcodeproj */,
+				B18CCEF86D9F44C582C36A0B /* SplashScreen.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -677,9 +681,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* atiMobileTemplate */,
+				13B07FAE1A68108700A75B9A /* speakup */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* atiMobileTemplateTests */,
+				00E356EF1AD99517003FC87E /* speakupTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				44D398369DF24A2792FBB321 /* Resources */,
@@ -693,10 +697,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* atiMobileTemplate.app */,
-				00E356EE1AD99517003FC87E /* atiMobileTemplateTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* atiMobileTemplate-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* atiMobileTemplate-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* speakup.app */,
+				00E356EE1AD99517003FC87E /* speakupTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* speakup-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* speakup-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -713,9 +717,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* atiMobileTemplateTests */ = {
+		00E356ED1AD99517003FC87E /* speakupTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "atiMobileTemplateTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "speakupTests" */;
 			buildPhases = (
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
@@ -726,14 +730,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = atiMobileTemplateTests;
-			productName = atiMobileTemplateTests;
-			productReference = 00E356EE1AD99517003FC87E /* atiMobileTemplateTests.xctest */;
+			name = speakupTests;
+			productName = speakupTests;
+			productReference = 00E356EE1AD99517003FC87E /* speakupTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* atiMobileTemplate */ = {
+		13B07F861A680F5B00A75B9A /* speakup */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "atiMobileTemplate" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "speakup" */;
 			buildPhases = (
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
@@ -744,14 +748,14 @@
 			);
 			dependencies = (
 			);
-			name = atiMobileTemplate;
+			name = speakup;
 			productName = "Hello World";
-			productReference = 13B07F961A680F5B00A75B9A /* atiMobileTemplate.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* speakup.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* atiMobileTemplate-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* speakup-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "atiMobileTemplate-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "speakup-tvOS" */;
 			buildPhases = (
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -762,14 +766,14 @@
 			);
 			dependencies = (
 			);
-			name = "atiMobileTemplate-tvOS";
-			productName = "atiMobileTemplate-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* atiMobileTemplate-tvOS.app */;
+			name = "speakup-tvOS";
+			productName = "speakup-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* speakup-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* atiMobileTemplate-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* speakup-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "atiMobileTemplate-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "speakup-tvOSTests" */;
 			buildPhases = (
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
@@ -780,9 +784,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "atiMobileTemplate-tvOSTests";
-			productName = "atiMobileTemplate-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* atiMobileTemplate-tvOSTests.xctest */;
+			name = "speakup-tvOSTests";
+			productName = "speakup-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* speakup-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -809,7 +813,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "atiMobileTemplate" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "speakup" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -876,10 +880,10 @@
 			);
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* atiMobileTemplate */,
-				00E356ED1AD99517003FC87E /* atiMobileTemplateTests */,
-				2D02E47A1E0B4A5D006451C7 /* atiMobileTemplate-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* atiMobileTemplate-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* speakup */,
+				00E356ED1AD99517003FC87E /* speakupTests */,
+				2D02E47A1E0B4A5D006451C7 /* speakup-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* speakup-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1244,7 +1248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* atiMobileTemplateTests.m in Sources */,
+				00E356F31AD99517003FC87E /* speakupTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1270,7 +1274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* atiMobileTemplateTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* speakupTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1279,12 +1283,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* atiMobileTemplate */;
+			target = 13B07F861A680F5B00A75B9A /* speakup */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* atiMobileTemplate-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* speakup-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1296,7 +1300,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = atiMobileTemplate;
+			path = speakup;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1315,18 +1319,22 @@
 					"$(SRCROOT)..\node_modules\ati-navigationiosAtiNavigation",
 					"$(SRCROOT)..\node_modules\ati-ui-elementsiosCariIstri",
 					"$(SRCROOT)..\node_modules\neact-native-i18nios",
+					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
 				);
-				INFOPLIST_FILE = atiMobileTemplateTests/Info.plist;
+				INFOPLIST_FILE = speakupTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/atiMobileTemplate.app/atiMobileTemplate";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/speakup.app/speakup";
 			};
 			name = Debug;
 		};
@@ -1340,18 +1348,22 @@
 					"$(SRCROOT)..\node_modules\ati-navigationiosAtiNavigation",
 					"$(SRCROOT)..\node_modules\ati-ui-elementsiosCariIstri",
 					"$(SRCROOT)..\node_modules\neact-native-i18nios",
+					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
 				);
-				INFOPLIST_FILE = atiMobileTemplateTests/Info.plist;
+				INFOPLIST_FILE = speakupTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/atiMobileTemplate.app/atiMobileTemplate";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/speakup.app/speakup";
 			};
 			name = Release;
 		};
@@ -1366,8 +1378,9 @@
 					"$(SRCROOT)..\node_modules\ati-navigationiosAtiNavigation",
 					"$(SRCROOT)..\node_modules\ati-ui-elementsiosCariIstri",
 					"$(SRCROOT)..\node_modules\neact-native-i18nios",
+					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
 				);
-				INFOPLIST_FILE = atiMobileTemplate/Info.plist;
+				INFOPLIST_FILE = speakup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1375,7 +1388,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = atiMobileTemplate;
+				PRODUCT_NAME = speakup;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1390,8 +1403,9 @@
 					"$(SRCROOT)..\node_modules\ati-navigationiosAtiNavigation",
 					"$(SRCROOT)..\node_modules\ati-ui-elementsiosCariIstri",
 					"$(SRCROOT)..\node_modules\neact-native-i18nios",
+					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
 				);
-				INFOPLIST_FILE = atiMobileTemplate/Info.plist;
+				INFOPLIST_FILE = speakup/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1399,7 +1413,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = atiMobileTemplate;
+				PRODUCT_NAME = speakup;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -1421,15 +1435,19 @@
 					"$(SRCROOT)..\node_modules\ati-navigationiosAtiNavigation",
 					"$(SRCROOT)..\node_modules\ati-ui-elementsiosCariIstri",
 					"$(SRCROOT)..\node_modules\neact-native-i18nios",
+					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
 				);
-				INFOPLIST_FILE = "atiMobileTemplate-tvOS/Info.plist";
+				INFOPLIST_FILE = "speakup-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.atiMobileTemplate-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.speakup-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1454,15 +1472,19 @@
 					"$(SRCROOT)..\node_modules\ati-navigationiosAtiNavigation",
 					"$(SRCROOT)..\node_modules\ati-ui-elementsiosCariIstri",
 					"$(SRCROOT)..\node_modules\neact-native-i18nios",
+					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
 				);
-				INFOPLIST_FILE = "atiMobileTemplate-tvOS/Info.plist";
+				INFOPLIST_FILE = "speakup-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.atiMobileTemplate-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.speakup-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1486,18 +1508,22 @@
 					"$(SRCROOT)..\node_modules\ati-navigationiosAtiNavigation",
 					"$(SRCROOT)..\node_modules\ati-ui-elementsiosCariIstri",
 					"$(SRCROOT)..\node_modules\neact-native-i18nios",
+					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
 				);
-				INFOPLIST_FILE = "atiMobileTemplate-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "speakup-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.atiMobileTemplate-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.speakup-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/atiMobileTemplate-tvOS.app/atiMobileTemplate-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/speakup-tvOS.app/speakup-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
@@ -1518,18 +1544,22 @@
 					"$(SRCROOT)..\node_modules\ati-navigationiosAtiNavigation",
 					"$(SRCROOT)..\node_modules\ati-ui-elementsiosCariIstri",
 					"$(SRCROOT)..\node_modules\neact-native-i18nios",
+					"$(SRCROOT)\..\node_modules\react-native-splash-screen\ios",
 				);
-				INFOPLIST_FILE = "atiMobileTemplate-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "speakup-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.atiMobileTemplate-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.speakup-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/atiMobileTemplate-tvOS.app/atiMobileTemplate-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/speakup-tvOS.app/speakup-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -1636,7 +1666,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "atiMobileTemplateTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "speakupTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1645,7 +1675,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "atiMobileTemplate" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "speakup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1654,7 +1684,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "atiMobileTemplate-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "speakup-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1663,7 +1693,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "atiMobileTemplate-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "speakup-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1672,7 +1702,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "atiMobileTemplate" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "speakup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

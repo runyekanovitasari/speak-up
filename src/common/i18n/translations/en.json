@@ -18,15 +18,22 @@
         "logout": "Log Out"
     },
     "header": {
-"ListScreen": "ListScreen",
-"DetailScreen": "DetailScreen",
-"TransactionScreen": "TransactionScreen",
-"TransactionScreen": "TransactionScreen",
-"RegistrationScreen": "RegistrationScreen",
-"LoginScreen": "LoginScreen",
-"HomeScreen": "HomeScreen",
+    "ListScreen": "ListScreen",
+    "DetailScreen": "DetailScreen",
+    "TransactionScreen": "TransactionScreen",
+    "TransactionScreen": "TransactionScreen",
+    "RegistrationScreen": "RegistrationScreen",
+    "LoginScreen": "LoginScreen",
+    "HomeScreen": "HomeScreen",
         "ConfirmationScreen": "Confirmation Result",
         "ResultScreen": "Transaction Result"
+    },
+    "footer": {
+        "PostLoginScreen": "Home",
+        "TransferScreen": "Transfer",
+        "QRPayScreen": "QR Pay",
+        "PaymentScreen": "Payment",
+        "AccountScreen": "Account"
     },
     "sideMenu": {
     },

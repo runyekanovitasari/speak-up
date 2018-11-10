@@ -1,7 +1,7 @@
 import { createNavigationReducer } from 'react-navigation-redux-helpers';
 import AppNavigator from './RootStackNavigation';
 
-const initialState = AppNavigator.router.getStateForAction(AppNavigator.router.getActionForPathAndParams('HomeScreen'));
+const initialState = AppNavigator.router.getStateForAction(AppNavigator.router.getActionForPathAndParams('LoginScreen'));
 
 const navReducer = (state = initialState, action) => {
 const nextState = AppNavigator.router.getStateForAction(action, state);

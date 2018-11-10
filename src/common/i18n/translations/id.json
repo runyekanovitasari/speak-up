@@ -21,6 +21,13 @@
         "ConfirmationScreen": "Confirmation Result",
         "ResultScreen": "Transaction Result"
     },
+    "footer": {
+        "PostLoginScreen": "Beranda",
+        "TransferScreen": "Transfer",
+        "QRPayScreen": "Pembayaran QR",
+        "PaymentScreen": "Pembayaran",
+        "AccountScreen": "Akun"
+    },
     "sideMenu": {
     },
     "errorMessage": {

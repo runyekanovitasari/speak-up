@@ -5,14 +5,14 @@ const { width, height } = Dimensions.get('window');
 
 export default {
     containerBackground: {
-        color: ColorProperties.WHITE,
+        color: ColorProperties.SILVER,
     },
     textInputPassword: {
         marginTop: 30,
         fontSize: 20,
-        color: 'white',
-        borderBottomWidth: 1,
-        borderBottomColor: 'white',
+        color: 'black',
+        borderBottomWidth: 0.5,
+        borderBottomColor: 'black',
         textAlign: 'center',
     },
     container: {
@@ -41,23 +41,8 @@ export default {
     headerHomeStyle: {
         paddingTop: 0,
         height: 60,
-        backgroundColor: ColorProperties.TOSCA,
+        backgroundColor: ColorProperties.NAVY,
     },
-    headerTitleBank: {
-        marginTop: 12,
-        fontSize: 25,
-        textAlign: 'left',
-        color: ColorProperties.WHITE,
-        fontWeight: '100',
-      },
-    headerTitlePocket: {
-        marginTop: 12,
-        fontSize: 25,
-        textAlign: 'left',
-        color: ColorProperties.WHITE,
-        fontWeight: 'bold',
-      },
-
     /* HOME CONTENT */
     titleListAccountStyle: {
         fontWeight: 'normal',
@@ -129,7 +114,7 @@ export default {
         fontWeight: 'normal',
     },
     tab: {
-        backgroundColor: ColorProperties.TOSCA,
+        backgroundColor: ColorProperties.NAVY,
     },
     iconTab: {
         color: ColorProperties.WHITE,
@@ -152,14 +137,20 @@ export default {
     /* LOGIN-SCREEN */
     containerLoginStyle: {
         flex: 2,
-        backgroundColor: ColorProperties.TOSCA,
+        backgroundColor: ColorProperties.SILVER,
+    },
+
+    /** LOGIN-SPLASH SCREEN */
+    logoSplash: {
+        height: PercentageSize.heightPercentageToDP('50%'),
+        width: PercentageSize.widthPercentageToDP('50%'),
+        paddingBottom: 10,
     },
 
     /** LOGIN-LOGO */
     logoContainer: {
-        backgroundColor: ColorProperties.TOSCA,
+        backgroundColor: ColorProperties.SILVER,
         alignItem: 'center',
-        paddingTop: 50,
     },
     textContainer: {
         flexDirection: 'row',
@@ -169,11 +160,10 @@ export default {
         justifyContent: 'space-between',
         alignItems: 'center',
         alignSelf: 'center',
-        height: height / 8,
-        width: width / 15,
     },
     image: {
-        height: height / 8,
+        height: PercentageSize.heightPercentageToDP('40%'),
+        width: PercentageSize.widthPercentageToDP('40%'),
     },
     title_bank: {
         fontSize: 18,
@@ -181,19 +171,13 @@ export default {
         color: ColorProperties.WHITE,
         fontWeight: '100',
     },
-    title_pocket: {
-        fontSize: 18,
-        textAlign: 'left',
-        color: ColorProperties.WHITE,
-        fontWeight: 'bold',
-    },
 
     /* lOGIN-BOX */
     viewStyle: {
         flex: 1,
-        backgroundColor: ColorProperties.TOSCA,
+        backgroundColor: ColorProperties.SILVER,
         alignItem: 'center',
-        paddingTop: 100,
+        paddingTop: 20,
     },
     Cont: {
         alignItems: 'center',
@@ -223,23 +207,35 @@ export default {
         alignSelf: 'center',
         justifyContent: 'center',
         alignItems: 'center',
-        width: 180,
+        width: 220,
         height: 40,
-        backgroundColor: ColorProperties.DARK_YELLOW,
+        backgroundColor: ColorProperties.NAVY,
+        borderRadius: 8,
+        marginTop: 20,
+    },
+    registerButton: {
+        alignSelf: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+        marginRight: 30,
+        width: 100,
+        height: 40,
+        backgroundColor: ColorProperties.NAVY,
         marginBottom: 30,
         borderRadius: 8,
-        marginTop: 50,
     },
     textStyle: {
-        fontSize: 20,
-        fontWeight: 'bold',
+        fontSize: 16,
+        fontWeight: 'normal',
         textAlign: 'center',
+        fontFamily: 'AvenirNextLTPro',
+        fontStyle: 'normal',
     },
     iconStyle: {
         paddingLeft: 10,
         width: 30,
         height: 30,
-        color: ColorProperties.WHITE,
+        color: ColorProperties.BLACK,
     },
     viewContainerStyle: {
         flexDirection: 'row',
@@ -249,41 +245,46 @@ export default {
         marginTop: 10,
         width: 30,
         height: 30,
-        color: 'white',
-        alignSelf: 'flex-end',
+        color: 'black',
+        alignSelf: 'flex-start',
+        marginLeft: 50,
     },
     textInputStyle: {
-        fontSize: 20,
-        color: 'white',
-        borderBottomWidth: 1,
-        borderBottomColor: 'white',
-        justifyContent: 'center',
-        alignContent: 'center',
-        alignSelf: 'center',
+        fontSize: 14,
+        color: 'black',
+        borderBottomWidth: 0.5,
+        borderBottomColor: 'black',
+        width: 50,
+        height: 42,
     },
     iconLockStyle: {
         marginTop: 30,
         width: 30,
         height: 30,
-        color: 'white',
+        color: 'black',
         justifyContent: 'center',
-        alignSelf: 'flex-end',
+        alignSelf: 'flex-start',
     },
     textInputPasswordStyle: {
-        fontSize: 20,
-        color: 'white',
-        borderBottomWidth: 1,
-        borderBottomColor: 'white',
         justifyContent: 'center',
         alignContent: 'center',
         alignSelf: 'center',
+        fontSize: 14,
+        color: 'black',
+        borderBottomWidth: 0.5,
+        borderBottomColor: 'black',
+        width: 50,
+        height: 42,
     },
     iconEyeStyle: {
-        marginTop: 30,
+        marginTop: 10,
         width: 30,
         height: 30,
-        color: 'white',
-        justifyContent: 'center',
+        color: 'black',
+        marginRight: 15,
+    },
+    containerPassword: {
+        flexDirection: 'row', justifyContent: 'space-between', width: width - 80, height:42,
     },
 
 
@@ -398,7 +399,7 @@ export default {
     },
     message: {
         alignSelf: 'center',
-        color: ColorProperties.TOSCA,
+        color: ColorProperties.NAVY,
     },
     indicator: {
         // alignSelf:'center',

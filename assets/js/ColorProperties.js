@@ -7,16 +7,15 @@ const ColorProperties = {
     PINK: '#ff7fa5',
     BABY_BLUE: '#45bbc4',
     DARK_YELLOW: '#e8cf52',
-    SILVER: '#CCCCCC',
+    SILVER: '#EAE8EE',
     LIGHT_PINK: '#f4aeae',
     LIGHT_YELLOW: '#f7e289',
     LIGHT_GREEN: '#afe291',
     LIGHT_BLUE: '#87cbd6',
     RED: '#bf2828',
-    NAVY: '#376c9b',
     DARK_NAVY: '#46677a',
     GREEN: '#218235',
-    TOSCA: '#45bbc4',
+    NAVY: '#4E5C6D',
 };
 
 export default ColorProperties;
